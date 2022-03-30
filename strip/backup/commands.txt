@@ -1,0 +1,29 @@
+test_plot("../strip_to_strip_ME21_01_02_2017","ClosedCircuit_ShortCables_WithBox_0-300V_",".txt")
+test_plot("../strip_to_strip_ME21_18_01_2017","ClosedCircuit_ShortCables_WithBox_0-300V_",".txt")
+test_plot("../strip_to_strip_ME21_23_11_2016","ClosedCircuit_ShortCables_WithBox_300V_")
+test_plot("../strip_to_strip_ME21_09_11_2016","ClosedCircuit_ShortCables_WithBox_300V_",".txt")
+strip_to_strip_ME21_03_08_2016 - seems to be open circuit!
+test_plot("../strip_to_strip_ME21_21_07_2016","ClosedCircuit_ShortCables_WithBox_300V_")
+test_plot("../strip_to_strip_ME21_06_07_2016","ME21_ClosedCircuit_ShortCables_WithBox_0V-300V_",".txt")
+	=> L1s12, L2s23 to be excluded
+test_plot("../strip_to_strip_ME21_25_05_2016","ClosedCircuit_ShortCables_WithBox_0-300V_",".txt")
+test_plot("../strip_to_strip_ME21_30_03_2016","ClosedCircuit_ShortCables_WithBox_0-300V_",".txt")
+	=> to be checked! seems to be an open circuite for some chennels!
+test_plot("../strip_to_strip_ME21_18_02_2016","ClosedCircuit_ShortCables_WithBox_0-300V_")
+test_plot("../strip_to_strip_ME21_02_12_2015","ClosedCircuit_ShortCables_WithBox_300V_",".txt")
+strip_to_strip_ME21_18_11_2015 - seems to be open circuit
+ 
+
+
+test_plot("./2017_1025","ClosedCircuit_ShortCables_WithBox_0-300V_",".txt")
+test_plot("../strip_to_strip_ME11_18_01_2017","ClosedCircuit_ShortCables_WithBox_0-300V_",".txt")
+test_plot("../strip_to_strip_ME11_16_11_2016","ClosedCircuit_ShortCables_WithBox_0-300V_",".txt")
+test_plot("../strip_to_strip_ME11_31_08_2016","ClosedCircuit_ShortCables_WithBox_300V_")
+test_plot("../strip_to_strip_ME11_20_07_2016","ClosedCircuit_ShortCables_WithBox_300V_")
+test_plot("../strip_to_strip_ME11_13_07_2016","ClosedCircuit_ShortCables_WithBox_300V_")
+test_plot("../strip_to_strip_ME11_8_6_2016","ClosedCircuit_ShortCables_WithBox_0-300V_",".txt")
+test_plot("../strip_to_strip_ME11_31_03_2016","ClosedCircuit_ShortCables_WithBox_0-300V_",".txt")
+test_plot("../strip_to_strip_ME11_03_03_2016","ClosedCircuit_ShortCables_WithBox_0-300V_",".txt")
+test_plot("../strip_to_strip_ME11_11_02_2016","ClosedCircuit_ShortCables_WithBox_0-300V_",".txt")
+test_plot("../strip_to_strip_ME11_09_12_2015","ClosedCircuit_ShortCables_WithBox_300V_",".txt")
+test_plot("../strip_to_strip_ME11_30_09_2015","ClosedCircuit_ShortCables_WithBox_300V_",".txt")
