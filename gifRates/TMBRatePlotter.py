@@ -219,8 +219,8 @@ else:
         #plotProblemWGrates_Q = TGraph(len(tmbdump_hv0))
         #plotNormalWGrates_Q = TGraph(len(tmbdump_hv0))
     if args.plotcathodes:
-        plotCFEBrates = TGraph(len(tmbdump_hv0), "CFEB", kMagenta+2, True)
-        plotCLCTrates = TGraph(len(tmbdump_hv0), "CLCT#"+str(args.clctnum), kBlue, True)
+        plotCFEBrates = Graph(len(tmbdump_hv0), "CFEB", kMagenta+2, True)
+        plotCLCTrates = Graph(len(tmbdump_hv0), "CLCT#"+str(args.clctnum), kBlue, True)
         #plotCFEBrates_Q = TGraph(len(tmbdump_hv0))
         #plotCLCTrates_Q = TGraph(len(tmbdump_hv0))
     #plotCorrALCTrates_Q = TGraph(len(tmbdump_hv0))
@@ -256,6 +256,7 @@ for i in xrange(len(tmbdump_hv0)):
         l5bad = t11hist.GetBinContent(7)/30
         l5good = t11hist.GetBinContent(8)/30
         corralct = alct - l5bad + l5good
+        print("alct: "+str(alct)+" l5bad: "+str(l5bad)+" l5good: "+str(l5good))
         if args.plotcathodes:
             cfeb = tmbdump_hv0[i][4]/thv0 - tmbdump_0v[i][4]/t0v
             clct = tmbdump_hv0[i][5]/thv0 - tmbdump_0v[i][5]/t0v
@@ -358,12 +359,12 @@ else:
     elif args.validatewithold:
         TMBRateLimits = Limits("TMBRatelimits", "TMB Dump Dark Rates", "Accumulated Charge (mC/cm)", "Dark Rate (kHz)", 1000, 0, 500, 100, 0, 5)
     else:
-        TMBRateLimits = Limits("TMBRatelimits", "TMB Dump Dark Rates", "Accumulated Charge (mC/cm)", "Dark Rate (kHz)", 1000, 0, qmax + 10, 100, 0, 5)
+        TMBRateLimits = Limits("TMBRatelimits", "TMB Dump Dark Rates", "Accumulated Charge (mC/cm)", "Dark Rate (kHz)", 1000, qtot[0], qmax + 10, 100, 0, 8)
     plotALCTrates.draw()
-    #plotCorrALCTrates.draw()
+    plotCorrALCTrates.draw()
     plotTMBrates.draw()
-    #toplot = [plotALCTrates, plotCorrALCTrates, plotTMBrates]
-    toplot = [plotALCTrates, plotTMBrates]
+    toplot = [plotALCTrates, plotCorrALCTrates, plotTMBrates]
+    #toplot = [plotALCTrates, plotTMBrates]
     if args.plotcathodes:
         plotCFEBrates.draw()
         plotCLCTrates.draw()

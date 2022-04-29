@@ -62,4 +62,5 @@ ok
       9984         03-NOV-2021 , 15:05:13       03-11-21 15:03          ME21equalizedHV0    emugif6.cern.ch:/storage/GIF/data/current/csc_00000001_EmuRUI01_Test_11_000_211103_140331_UTC.raw	Now at 10% CF4 Issue with cathodes not receiving data isn't present at 3.6 kV - Katerina suggests timing issue with 27s, for ongoing measurements will be doing 11 and 11c (with TMB dumps) only - starting at 3.6 kV and working up
      10020         10-NOV-2021 , 17:16:40  2021-11-10 16:14:10          ME21equalizedHV0    emugif6.cern.ch:/storage/GIF/data/current/csc_00000001_EmuRUI01_Test_11_000_211110_161347_UTC.raw	Now at 10% CF4
      10089         23-FEB-2022 , 14:19:40  2022-02-23 14:18:04          ME21equalizedHV0    emugif6.cern.ch:/storage/GIF/data/current/csc_00000001_EmuRUI01_Test_11_000_220223_131842_UTC.raw	
+     10121         30-MAR-2022 , 12:46:37  2022-03-30 10:46:11          ME21equalizedHV0    emugif6.cern.ch:/storage/GIF/data/current/csc_00000001_EmuRUI01_Test_11_000_220330_104557_UTC.raw
 done

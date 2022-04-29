@@ -341,7 +341,7 @@ if Test11_Total_Hit_clusters_minus_muons:
       Layer6_WG38.fill(i, yvar, LayersTotal_Hit_clusters_minus_muons[6-1].hist.GetBinContent(i+1, 38))
     AnodeRateCanvas = TCanvas("AnodeRateCanvas", "Dark rate vs Time", 200, 10, 1400, 1000)
     AnodeRateCanvas.cd()
-    AnodeRateLimits = Limits("AnodeRatelimits", "Normalized Anode Dark Rate Density", "Accumulated Charge (mC/cm)", "Dark Rate Density (/cm)", 1000, 330, qmax + 10, 100, 0, 0.03)
+    AnodeRateLimits = Limits("AnodeRatelimits", "Normalized Anode Dark Rate Density", "Accumulated Charge (mC/cm)", "Dark Rate Density (/cm)", 1000, 330, qmax + 10, 100, 0, 35.03)
     Layer1_WG47.draw()
     Layer2_WG45.draw()
     Layer4_WG44.draw()
