@@ -48,6 +48,7 @@ def readCurrentFile(ifile, LayerStrips, charge, measnum):
     with open(ifile, "r") as f:
         for linenum, line in enumerate(f):
             if linenum < 3: continue
+            print("Line is "+line)
             lsplit = line.split()
             match = re.match('layer(\d)_strips(\d\d)_300V',lsplit[0])
             lstitle = match.group(1,2)
