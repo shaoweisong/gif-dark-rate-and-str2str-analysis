@@ -1,5 +1,5 @@
 import argparse
-from ROOT import gROOT, TCanvas, TLegend, TGraph, TDatime, TH2F, gStyle, kRed, kBlue, kBlack, kMagenta, TFile
+from ROOT import gROOT, TCanvas, TLegend, TGraph, TDatime, TH2F, gStyle, kRed, kBlue, kBlack, kMagenta, kGreen, TMarker, kWhite, TFile
 from datetime import datetime
 gStyle.SetOptStat(0)
 
@@ -23,12 +23,17 @@ parser.add_argument('--charges', action ='store', default='charges_me11_2pct.txt
 parser.add_argument('--DatHV0', action ='store', default='TMB_HV0_me11_2pct.txt', type=str, help="of HV0 TMB Dump measurements\n DEFAULT: TMB_HV0_me11_2pct.txt")
 parser.add_argument('--Dat0V', action ='store', default='TMB_0V_me11_2pct.txt', type=str, help="list of 0V TMB Dump measurements\n DEFAULT: TMB_0V_me11_2pct.txt")
 parser.add_argument('--DatT11', action ='store', default='anode_me11_2pct.txt', type=str, help="list of Test 11 measurements\n DEFAULT: anode_me11_2pct.txt")
+parser.add_argument('--ChamberType', action ='store', default=1, type=int, help="Chamber Type \n DEFAULT: 1")
 
 args = parser.parse_args()
 class Legend:
     def __init__(self, xmin=0.1, ymin=0.7, xmax=0.3, ymax=0.9):
         self.legend = TLegend(xmin, ymin, xmax, ymax)
-        self.legend.SetHeader("Legend", "C")
+        #self.legend.SetHeader("Legend", "C")
+        if args.ChamberType == 1:
+          self.legend.SetHeader("ME1/1", "C")
+        else:
+          self.legend.SetHeader("ME2/1", "C")
     def fill(self, tgraphs):
         for tgraph in tgraphs:
             self.legend.AddEntry(tgraph.graph, tgraph.title, "lp")
@@ -40,21 +45,23 @@ class Graph:
         self.title = name
         self.color = color
         self.iscorrection = correction
-        self.iscathodeortmb = correction
+        self.iscathodeortmb = cathodeOrTMB
     def fill(self, i, xpoint, ypoint):
         self.graph.SetPoint(i, xpoint, ypoint)
     def draw(self):
         self.graph.SetMarkerColor(self.color)
         self.graph.SetMarkerSize(2)
         if self.iscorrection:
-            self.graph.SetLineColor(kBlack)
+            #self.graph.SetLineColor(kBlack)
+            self.graph.SetLineColorAlpha(kBlack,0.00)
             self.graph.SetMarkerStyle(24)
         elif self.iscathodeortmb:
-            self.graph.SetLineColor(self.color)
-            self.graph.SetMarkerStyle(21)
-        else:
-            self.graph.SetLineColor(self.color)
+            self.graph.SetLineColorAlpha(self.color,0.00)
             self.graph.SetMarkerStyle(20)
+        else:
+            #self.graph.SetLineColor(self.color)
+            self.graph.SetLineColorAlpha(self.color,0.00)
+            self.graph.SetMarkerStyle(22)
         self.graph.Draw("PL SAME")
 class Limits:
     def __init__(self, innername, title, xtitle, ytitle, xbins, xmin, xmax, ybins, ymin, ymax):
@@ -210,9 +217,9 @@ if args.test11compare:
     #plotTest11_TotalHitClusterRates_Q = TGraph(len(tmbdump_hv0))
     #plotTest11_TotalHitCluster_MinusMuonRates_Q = TGraph(len(tmbdump_hv0))
 else:
-    plotALCTrates = Graph(len(tmbdump_hv0), "ALCT", kRed+3)
+    plotALCTrates = Graph(len(tmbdump_hv0), "ALCT", kRed)
     plotCorrALCTrates = Graph(len(tmbdump_hv0), "ALCT Corrected", kRed+3, False, True)
-    plotTMBrates = Graph(len(tmbdump_hv0), "TMB (ALCT*CLCT)", kBlue+3, True)
+    plotTMBrates = Graph(len(tmbdump_hv0), "TMB (ALCT*CLCT)", kGreen, True)
     if args.plotproblem:
         plotProblemWGrates = Graph(len(tmbdump_hv0), "Problem WG 5 Layer 5", kRed+3)
         plotNormalWGrates = Graph(len(tmbdump_hv0), "Normal WG 4 Layer 5", kBlue+3)
@@ -360,13 +367,13 @@ else:
         TMBRateLimits = Limits("TMBRatelimits", "TMB Dump Dark Rates", "Accumulated Charge (mC/cm)", "Dark Rate (kHz)", 1000, 0, 500, 100, 0, 5)
     else:
         print(qmax)
-        TMBRateLimits = Limits("TMBRatelimits", "TMB Dump Dark Rates", "Accumulated Charge (mC/cm)", "Dark Rate (kHz)", 1000, qtot[0], qmax + 10, 100, 0, 8)
+        TMBRateLimits = Limits("TMBRatelimits", "TMB Dump Dark Rates", "Accumulated Charge (mC/cm)", "Dark Rate (kHz)", 1000, qtot[0], qmax + 10, 100, 0, 1.6)
     plotALCTrates.draw()
     plotCorrALCTrates.draw()
     plotTMBrates.draw()
     #A chambertype parameter is necessary
-    #toplot = [plotALCTrates, plotCorrALCTrates, plotTMBrates]
-    toplot = [plotALCTrates, plotTMBrates]
+    toplot = [plotALCTrates, plotCorrALCTrates, plotTMBrates]
+    #toplot = [plotALCTrates, plotTMBrates]
     if args.plotcathodes:
         plotCFEBrates.draw()
         plotCLCTrates.draw()

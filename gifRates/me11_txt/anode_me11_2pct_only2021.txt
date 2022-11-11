@@ -52,16 +52,3 @@ me11data/2pct/A9691.root      345.36            12-MAY-2021
 me11data/2pct/A9729.root      353.51            19-MAY-2021
 me11data/2pct/A9762.root      362.26            26-MAY-2021
 me11data/2pct/A9833.root      371.21            23-JUN-2021
-me11data/A10050.root      375.44       02-FEB-2022
-me11data/A10148.root      385.44       30-MAR-2022
-me11data/A10181.root      395.44       13-APR-2022
-me11data/A10202.root      405.44       23-APR-2022
-me11data/A10251.root      410.44       13-JUL-2022
-me11data/A10251.root      415.44       13-JUL-2022
-me11data/A10421.root      420.44       31-AUG-2022
-me11data/A10497.root      425.44       07-SEP-2022
-me11data/A10585.root      430.44       14-SEP-2022
-me11data/A10664.root      435.44       21-SEP-2022
-me11data/A10692.root      440.44       28-SEP-2022
-me11data/A10781.root      445.44       05-OCT-2022
-me11data/A10861.root      450.44       12-OCT-2022

@@ -18,7 +18,7 @@ mkdir -p $outdir
 #Check where it's stored first! If it was moved to eos storage for example, then SCP isn't gonna work. Comment it out and uncomment the cp line below
 #scp localuser@$filename $outdir/${measnum}.raw
 #cp $filename $outdir/${measnum}.raw
-wget -c http://emugif6.cern.ch/data/current/${filename}.raw -O $outdir/${measnum}.raw
+wget -c http://emugif2.cern.ch/data/current/${filename}.raw -O $outdir/${measnum}.raw
 ConvertRaw $outdir/${measnum}.raw $outdir/${measnum}_raw.root $maxevents
 # some module called by readFile.py seems to change the desired output file name by inserting _numEvent$measnum at the end, so we need to account for that
 # rather than change something and need to waste a bunch of time propagating it through code I am unfamiliar with, I am instead doing this simpler option
