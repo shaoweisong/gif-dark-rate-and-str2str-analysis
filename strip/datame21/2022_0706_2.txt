@@ -1,0 +1,8 @@
+Effective N of Points	frMinfrMax
+20	100	1000
+Title	I_max	I_meas	dI_stat	dI_sys	dI_tot	status
+layer1_strips23_300V	431	227.342	0.00711983	0	0.00711983	210
+layer3_strips12_300V	421	527.005	0.134098	-1.24029	1.24752	0
+layer3_strips23_300V	432	552.257	0.34596	-1.45076	1.49144	0
+layer5_strips12_300V	428	599.209	0.34881	-15.1346	15.1387	0
+layer5_strips23_300V	447	741.085	0.131704	-7.52629	7.52744	0

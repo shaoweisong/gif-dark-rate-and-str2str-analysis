@@ -27,13 +27,19 @@ parser.add_argument('--ChamberType', action ='store', default=1, type=int, help=
 
 args = parser.parse_args()
 class Legend:
-    def __init__(self, xmin=0.1, ymin=0.7, xmax=0.3, ymax=0.9):
+    def __init__(self, xmin=0.4, ymin=0.7, xmax=0.6, ymax=0.9):
         self.legend = TLegend(xmin, ymin, xmax, ymax)
         #self.legend.SetHeader("Legend", "C")
         if args.ChamberType == 1:
           self.legend.SetHeader("ME1/1", "C")
+          self.legend.SetTextSize(0.03)
+          self.legend.SetBorderSize(0)
+          self.legend.SetFillStyle(0)
         else:
           self.legend.SetHeader("ME2/1", "C")
+          self.legend.SetTextSize(0.03)
+          self.legend.SetBorderSize(0)
+          self.legend.SetFillStyle(0)
     def fill(self, tgraphs):
         for tgraph in tgraphs:
             self.legend.AddEntry(tgraph.graph, tgraph.title, "lp")
@@ -67,10 +73,17 @@ class Limits:
     def __init__(self, innername, title, xtitle, ytitle, xbins, xmin, xmax, ybins, ymin, ymax):
         self.lims = TH2F(innername, title+";"+ xtitle + ";" + ytitle, xbins, xmin, xmax, ybins, ymin, ymax)
         self.lims.Draw()
-        self.lims.GetXaxis().SetLabelSize(0.03)
-        self.lims.GetYaxis().SetLabelSize(0.03)
-        self.lims.GetYaxis().SetTitleSize(0.08)
-        self.lims.GetYaxis().SetTitleOffset(0.5)
+        
+        self.lims.GetXaxis().SetLabelSize(0.035)
+        self.lims.GetXaxis().SetTitleSize(0.045)
+        #self.lims.GetXaxis().CenterTitle(True)
+        self.lims.GetXaxis().SetTitleOffset(0.9)
+        
+        self.lims.GetYaxis().SetLabelSize(0.035)
+        self.lims.GetYaxis().SetTitleSize(0.045)
+        #.lims.GetYaxis().CenterTitle(True)
+        self.lims.GetYaxis().SetTitleOffset(0.9)
+        
         if args.timeplot:
             self.lims.GetXaxis().SetTimeDisplay(1)
             self.lims.GetXaxis().SetTimeOffset(0)
@@ -219,7 +232,7 @@ if args.test11compare:
 else:
     plotALCTrates = Graph(len(tmbdump_hv0), "ALCT", kRed)
     plotCorrALCTrates = Graph(len(tmbdump_hv0), "ALCT Corrected", kRed+3, False, True)
-    plotTMBrates = Graph(len(tmbdump_hv0), "TMB (ALCT*CLCT)", kGreen, True)
+    plotTMBrates = Graph(len(tmbdump_hv0), "ALCT*CLCT", kGreen, True)
     if args.plotproblem:
         plotProblemWGrates = Graph(len(tmbdump_hv0), "Problem WG 5 Layer 5", kRed+3)
         plotNormalWGrates = Graph(len(tmbdump_hv0), "Normal WG 4 Layer 5", kBlue+3)
@@ -263,7 +276,7 @@ for i in xrange(len(tmbdump_hv0)):
         l5bad = t11hist.GetBinContent(7)/30
         l5good = t11hist.GetBinContent(8)/30
         corralct = alct - l5bad + l5good
-        print("alct: "+str(alct)+" l5bad: "+str(l5bad)+" l5good: "+str(l5good))
+        #print("alct: "+str(alct)+" l5bad: "+str(l5bad)+" l5good: "+str(l5good))
         if args.plotcathodes:
             cfeb = tmbdump_hv0[i][4]/thv0 - tmbdump_0v[i][4]/t0v
             clct = tmbdump_hv0[i][5]/thv0 - tmbdump_0v[i][5]/t0v
@@ -367,7 +380,7 @@ else:
         TMBRateLimits = Limits("TMBRatelimits", "TMB Dump Dark Rates", "Accumulated Charge (mC/cm)", "Dark Rate (kHz)", 1000, 0, 500, 100, 0, 5)
     else:
         print(qmax)
-        TMBRateLimits = Limits("TMBRatelimits", "TMB Dump Dark Rates", "Accumulated Charge (mC/cm)", "Dark Rate (kHz)", 1000, qtot[0], qmax + 10, 100, 0, 1.6)
+        TMBRateLimits = Limits("TMBRatelimits", "TMB Dump Dark Rates", "Accumulated Charge [mC/cm]", "Dark Rate [kHz]", 1000, qtot[0], qmax + 10, 100, 0, 1.6)
     plotALCTrates.draw()
     plotCorrALCTrates.draw()
     plotTMBrates.draw()
