@@ -3,7 +3,7 @@ workdir=$PWD
 filename=$1
 measnum=$2
 outdir=${3:-$workdir/me11data/2pct}
-maxevents=${4:-60000}
+maxevents=${4:-100000}
 # you want this to be set larger than the number of events in your DQM plot for test 11 - this is just the number of events to be converted, while the analyzer runs over all events and automatically skips empty ones.
 # You definitely will want your number of events in the DQM plot to exceed 40000 as well, otherwise you need to redo the measurement
 ConvertRaw() {

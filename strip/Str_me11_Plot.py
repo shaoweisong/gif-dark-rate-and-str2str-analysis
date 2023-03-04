@@ -71,9 +71,9 @@ def doplot(lslist):
     Canvas12.cd()
 
     if args.tenpct:
-        Limits12 = TH2F("limits12", "Strips 1 and 2;Accumulated Charge (mC/cm);Strip 1 to Strip 2 Resistance (T#Omega)", 1000, 330, 750, 100, 10**(-3), 10**(4))
+        Limits12 = TH2F("limits12", "Strips 1 and 2;Accumulated Charge (mC/cm);Strip 1 to Strip 2 Resistance (T#Omega)", 1000, 330, 750, 100, 10**(-3), 10**(6))
     else:
-        Limits12 = TH2F("limits12", "Strips 1 and 2;Accumulated Charge (mC/cm);Strip 1 to Strip 2 Resistance (T#Omega)", 1000, 0, 500, 100, 10**(-3), 10**(4))
+        Limits12 = TH2F("limits12", "Strips 1 and 2;Accumulated Charge (mC/cm);Strip 1 to Strip 2 Resistance (T#Omega)", 1000, 0, 500, 100, 10**(-3), 10**(6))
     #Limits12.GetXaxis().SetLabelSize(0.03)
     #Limits12.GetYaxis().SetLabelSize(0.03)
     #Limits12.GetYaxis().SetTitleSize(0.03)
@@ -100,9 +100,9 @@ def doplot(lslist):
     Canvas23.cd()
 
     if args.tenpct:
-        Limits23 = TH2F("limits23", "Strips 2 and 3;Accumulated Charge (mC/cm);Strip 2 to Strip 3 Resistance (T#Omega)", 1000, 330, 750, 100, 10**(-3), 10**(4))
+        Limits23 = TH2F("limits23", "Strips 2 and 3;Accumulated Charge (mC/cm);Strip 2 to Strip 3 Resistance (T#Omega)", 1000, 330, 750, 100, 10**(-3), 10**(6))
     else:
-        Limits23 = TH2F("limits23", "Strips 2 and 3;Accumulated Charge (mC/cm);Strip 2 to Strip 3 Resistance (T#Omega)", 1000, 0, 500, 100, 10**(-3), 10**(4))
+        Limits23 = TH2F("limits23", "Strips 2 and 3;Accumulated Charge (mC/cm);Strip 2 to Strip 3 Resistance (T#Omega)", 1000, 0, 500, 100, 10**(-3), 10**(6))
     #Limits23.GetXaxis().SetLabelSize(0.03)
     #Limits23.GetYaxis().SetLabelSize(0.03)
     #Limits23.GetYaxis().SetTitleSize(0.03)

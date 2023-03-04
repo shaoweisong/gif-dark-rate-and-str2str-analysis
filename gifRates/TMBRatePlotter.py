@@ -227,7 +227,7 @@ else:
     #plotTMBrates_Q = TGraph(len(tmbdump_hv0))
 rmax = 0
 rmin = 1000000000000
-qmax = 450
+qmax = 500
 j=0
 tdtmin = datetime.strptime(tmbdump_0v[0][0], "%d-%b-%Y, %H:%M:%S") 
 tdtmax = datetime.strptime(tmbdump_0v[len(tmbdump_hv0)-1][0], "%d-%b-%Y, %H:%M:%S") 

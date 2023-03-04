@@ -1,0 +1,164 @@
+connecting...
+ok
+        A#                       rec date           start time                        HV                                                                                            file name	comment
+      1121         18-FEB-2016 , 17:54:59                 None          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_160218_165100_UTC.raw	30s
+      1169         25-FEB-2016 , 15:32:57                 None          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_160225_143219_UTC.raw	30 s
+      1228         03-MAR-2016 , 12:42:24                 None          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_160303_113851_UTC.raw	30s
+      1336         10-MAR-2016 , 17:37:35                 None          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_160310_163450_UTC.raw	30s
+      1368         01-APR-2016 , 17:40:02                 None          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_160401_153103_UTC.raw	
+      1419         04-APR-2016 , 11:36:59                 None          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_160404_093435_UTC.raw	
+      1544         14-APR-2016 , 15:52:03                 None          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_160414_134959_UTC.raw	
+      1558         15-APR-2016 , 11:44:54                 None          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_160415_093615_UTC.raw	
+      1600         18-APR-2016 , 19:04:19                19:00          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_160418_170110_UTC.raw	
+      1688         11-MAY-2016 , 11:27:13                 None          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_160511_092410_UTC.raw	30s 30s
+      1845         26-MAY-2016 , 17:32:02                 None          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_160526_152839_UTC.raw	
+      1907         15-JUN-2016 , 13:39:45                13:39          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_160615_113904_UTC.raw	duration 30s
+      2064         29-JUN-2016 , 15:29:23                12:24          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_160629_102457_UTC.raw	Duration: 30s
+      2176         06-JUL-2016 , 16:01:17                 None          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_160706_135939_UTC.raw	30s
+      2213         13-JUL-2016 , 12:06:32                 None          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_160713_100243_UTC.raw	
+      2404         20-JUL-2016 , 12:51:37                10:41          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_160720_084112_UTC.raw	Duration: 30s
+      2576         03-AUG-2016 , 11:32:00                 None          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_160803_092932_UTC.raw	
+      2696         10-AUG-2016 , 11:40:22                11:40          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_160810_094005_UTC.raw	
+      2775         31-AUG-2016 , 10:47:43                 None          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_160831_084500_UTC.raw	30s
+      2930         21-SEP-2016 , 15:06:11                15:04          ME11equalizedHV0         emugif2.cern.ch:/raid/data/current/csc_00000001 _ EmuRUI01_Test_11_000_160921_130437_UTC.raw	
+      2942         28-SEP-2016 , 15:28:50                15:25          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_160928_132533_UTC.raw	
+      2951         09-OCT-2016 , 00:27:39                00:27          ME11equalizedHV0         emugif2.cern.ch:/raid/data/ current /csc_00000001_EmuRUI01_Test_11_000_161008_222606_UTC.raw	
+      3182         19-OCT-2016 , 16:44:03                16:43          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_161019_144343_UTC.raw	
+      3245         26-OCT-2016 , 12:27:41                12:26          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_161026_102725_UTC.raw	beam off from 08:45 am
+      3429         02-NOV-2016 , 14:43:42                14:42          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_161102_134327_UTC.raw	
+      3449         02-NOV-2016 , 15:16:03                15:14          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_161102_141536_UTC.raw	
+      3507         09-NOV-2016 , 12:03:08                11:54          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_161109_110253_UTC.raw	
+      3698         16-NOV-2016 , 13:45:46                13:30          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_161116_124530_UTC.raw	
+      3826         23-NOV-2016 , 14:14:44                13:00          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_161123_131430_UTC.raw	
+      4062         17-JAN-2017 , 19:28:43       17.01.17 19:28          ME11equalizedHV0         emugif2.cern.ch:/raid/data/current/csc_00000001_ EmuRUI01 _Test_11_000_170117_182828_UTC.raw	
+      4094         19-JAN-2017 , 18:46:31             16.12.16          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_161216_123716_UTC.raw	
+      4143         23-JAN-2017 , 20:51:59             27.01.16          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_160127_133439_UTC.raw	m#1158
+      4159         23-JAN-2017 , 21:09:00             03.02.16          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_160203_161546_UTC.raw	m#1316
+      4171         23-JAN-2017 , 21:20:11             11.02.16          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_160211_110805_UTC.raw	m#1408
+      4372         25-JAN-2017 , 14:12:02             25.01.17          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_170125_131146_UTC.raw	
+      4444         01-FEB-2017 , 11:26:23             01.02.17          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_170201_102407_UTC.raw	
+      4557         08-FEB-2017 , 10:26:01             08.02.17          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_170208_092535_UTC.raw	
+      4719         15-FEB-2017 , 11:13:04       15.02.17 11:00          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_170215_101108_UTC.raw	
+      4848         22-FEB-2017 , 11:04:55       22.02.17 11:00          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_170222_100304_UTC.raw	
+      5011         01-MAR-2017 , 10:55:40       01.03.17 09:52          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_170301_095243_UTC.raw	
+      5147         08-MAR-2017 , 11:58:13       08.03.17 11:00          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_170308_105718_UTC.raw	
+      5284         15-MAR-2017 , 10:45:34       15.03.17 09:50          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_170315_094429_UTC.raw	
+      5393         07-APR-2017 , 18:56:59                 None          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_170407_165548_UTC.raw	
+      5536         19-APR-2017 , 12:09:09     2017-04-19 12:30          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_170419_100850_UTC.raw	
+      5626         24-APR-2017 , 10:29:00     2017-04-24 07:30          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_170424_082846_UTC.raw	
+      5694         05-MAY-2017 , 17:49:07       05-05-17 17:40          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_170505_154819_UTC.raw	
+      5814         31-MAY-2017 , 15:14:08     2017-05-31 13:50          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_170531_131233_UTC.raw	
+      5905         07-JUN-2017 , 11:53:58       07-06-17 11:00          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_170607_095256_UTC.raw	
+      6014         21-JUN-2017 , 13:42:15       21-06-17 11:46          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_170621_114125_UTC.raw	
+      6119         28-JUN-2017 , 12:51:09      28-06-17  11:45          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_170628_104726_UTC.raw	
+      6174         05-JUL-2017 , 11:31:41      05-07-17  07:30          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_170705_093052_UTC.raw	
+      6232         12-JUL-2017 , 17:31:13             15:30:06          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_170712_153006_UTC.raw	
+      6267         19-JUL-2017 , 12:07:38         11:30 Jul 19          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_170719_100609_UTC.raw	
+      6374         26-JUL-2017 , 11:37:15                 None          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_170726_093308_UTC.raw	
+      6470         02-AUG-2017 , 14:31:00     12:11 02-08-2017          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_170802_122627_UTC.raw	very likely they are doing some kind of beam test
+      6523         02-AUG-2017 , 16:19:28     12:42 02-08-2017          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_170802_141913_UTC.raw	very likely they are doing some kind of beam test
+      6527         03-AUG-2017 , 12:53:04     10:53 03-08-2017          ME11equalizedHV0         emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_170803_105232 _ UTC.raw	beam OFF very likely they are doing some kind of beam test
+      6557         09-AUG-2017 , 10:13:50     07:00 09-08-2017          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_170809_081139_UTC.raw	very likely they are doing some kind of beam test
+      6666         30-AUG-2017 , 14:12:30       30-08-17 13:00          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_170830_121125_UTC.raw	
+      6688         06-SEP-2017 , 18:11:27       06-09-17 17:30          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_170906_161048_UTC.raw	
+      6745         13-SEP-2017 , 10:44:59       13-09-17 09:30          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_170913_084421_UTC.raw	
+      6790         20-SEP-2017 , 10:51:36       20-09-17 08:44          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_170920_085104_UTC.raw	
+      6829         02-OCT-2017 , 11:16:28       02-10-17 09:09          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_171002_091221_UTC.raw	
+      6869         18-OCT-2017 , 12:15:36       18-10-17 10:15          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_171018_101511_UTC.raw	
+      6928         25-OCT-2017 , 11:29:52       25-10-17 09:28          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_171025_092917_UTC.raw	
+      7001         01-NOV-2017 , 11:27:49     2017-11-01 10:25          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_171101_102737_UTC.raw	
+      7042         15-NOV-2017 , 10:10:29       15-11-17 09:07          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_171115_090720_UTC.raw	
+      7079         22-NOV-2017 , 10:45:26       22-11-17 09:45          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_171122_094502_UTC.raw	
+      7136         29-NOV-2017 , 10:57:50       29-11-17 09:57          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_171129_095701_UTC.raw	
+      7183         13-DEC-2017 , 10:29:59       13-12-17 09:29          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_171213_092932_UTC.raw	
+      7227         19-JAN-2018 , 12:52:59       19-01-18 11:49          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_180119_114956_UTC.raw	
+      7269         24-JAN-2018 , 10:31:00       24-01-18 09:25          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_180124_093035_UTC.raw	
+      7314         31-JAN-2018 , 10:09:24       31-01-18 09:00          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_180131_090644_UTC.raw	
+      7360         14-FEB-2018 , 11:41:04       14-02-18 10:30          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_180214_104016_UTC.raw	
+      7401         21-FEB-2018 , 16:44:18       21-02-18 15:42          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_180221_154255_UTC.raw	
+      7450         28-FEB-2018 , 11:04:43       28-02-18 10:00          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_180228_100254_UTC.raw	
+      7503         28-MAR-2018 , 15:12:57                14:00          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_180328_131141_UTC.raw	
+      7558         04-APR-2018 , 11:09:32       04-04-18 09:06          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_180404_090602_UTC.raw	
+      7608         11-APR-2018 , 10:50:55       11-04-18 08:50          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_180411_085015_UTC.raw	
+      7647         18-APR-2018 , 10:09:17       18-04-18 08:08          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_180418_080829_UTC.raw	
+      7690         25-APR-2018 , 12:44:19       25-04-18 10:00          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_180425_104100_UTC.raw	
+      7756         16-MAY-2018 , 11:07:03       16-05-18 09:05          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_180516_090523_UTC.raw	
+      7801         23-MAY-2018 , 11:19:07       23-05-18 09:18          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_180523_091817_UTC.raw	
+      7843         06-JUN-2018 , 16:51:50       06-06-18 14:00          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_180606_144936_UTC.raw	
+      7889         13-JUN-2018 , 10:49:31       13-06-18 08:45          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_180613_084546_UTC.raw	
+      7944         20-JUN-2018 , 11:49:18       20-06-18 09:45          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_180620_094558_UTC.raw	
+      7992         27-JUN-2018 , 11:57:14       27-06-18 09:56          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_180627_095630_UTC.raw	
+      8038         04-JUL-2018 , 11:36:34       04-07-18 09:35          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_180704_093517_UTC.raw	
+      8086         11-JUL-2018 , 11:58:34       11-07-18 09:57          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_180711_095728_UTC.raw	
+      8132         18-JUL-2018 , 10:51:57       18-07-18 08:50          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_180718_085034_UTC.raw	
+      8179         25-JUL-2018 , 11:34:20       25-07-18 09:29          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_180725_092903_UTC.raw	
+      8220         01-AUG-2018 , 09:53:44       01-08-18 07:52          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_180801_075226_UTC.raw	
+      8236         01-AUG-2018 , 12:40:37       01-08-18 10:37          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_180801_103724_UTC.raw	
+      8306         29-AUG-2018 , 14:25:00       29-08-18 12:24          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_180829_122419_UTC.raw	10% CF4
+      8350         05-SEP-2018 , 10:59:30       05-09-18 08:57          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_180905_085704_UTC.raw	
+      8398         19-SEP-2018 , 11:04:37       19-09-18 09:02          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_180919_090240_UTC.raw	
+      8443         26-SEP-2018 , 11:15:19       24-09-18 09:12          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_180926_091235_UTC.raw	
+      8490         03-OCT-2018 , 11:05:28       03-10-18 09:04          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_181003_090433_UTC.raw	
+      8538         10-OCT-2018 , 11:12:56       10-10-18 09:08          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_181010_090831_UTC.raw	
+      8584         17-OCT-2018 , 11:12:40       17-10-18 09:09          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_181017_090935_UTC.raw	
+      8624         24-OCT-2018 , 11:02:23       24-10-18 08:59          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_181024_085913_UTC.raw	
+      8661         31-OCT-2018 , 10:07:47       31-10-18 09:05          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_181031_090512_UTC.raw	
+      8735         18-FEB-2019 , 14:01:56       18-02-19 13:01          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_190218_130108_UTC.raw	
+      8769         27-FEB-2019 , 17:47:32       27-02-19 16:35          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_190227_163501_UTC.raw	
+      8781         07-MAR-2019 , 17:28:25       07-03-19 16:26          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_190307_162642_UTC.raw	
+      8827         27-MAR-2019 , 13:02:38       27-03-19 12:00          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_190327_120008_UTC.raw	
+      8889         15-MAY-2019 , 16:43:38       15-05-19 14:42          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_190515_144248_UTC.raw	
+      8947         19-JUN-2019 , 17:53:17       19-06-19 15:51          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_190619_155130_UTC.raw	
+      8953         19-JUN-2019 , 18:57:39       19-06-19 16:56          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_190619_165614_UTC.raw	three afebs are disconnected (#4,#6 LL12, #3 LL34)
+      8955         19-JUN-2019 , 19:38:34       19-06-19 17:35          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_190619_173534_UTC.raw	three afebs are replaced (#4 LL12, #3 LL34 - new; #6 LL12 from ME1/1spare #6
+      8957         19-JUN-2019 , 21:53:18       19-06-19 19:00          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_190619_190020_UTC.raw	four afebs are replaced (#4 LL12, #3 LL34, #4 LL34, #6 LL12) all of them are taken from ME1/1spare
+      8972         20-JUN-2019 , 19:20:47       20-06-19 17:18          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_190620_171843_UTC.raw	four afebs are replaced (#4 LL12, #3 LL34, #4 LL34, #6 LL12) thresholds corrected
+      9024         26-JUN-2019 , 19:15:13       26-06-19 17:13          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_190626_171314_UTC.raw	
+      9039         09-OCT-2019 , 17:35:14       09-10-19 15:32          ME11equalizedHV0 http://emugif2.cern.ch/data/current/Tests_results/Test_11_AFEBNoise/csc_00000001_EmuRUI01_Test_11_000_191009_152902_UTC.plots/	old xml, ALCT + 2 more AFEBs replaced
+      9042         09-OCT-2019 , 18:01:11       09-10-19 15:56          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_191009_155631_UTC.raw	new xml, ALCT + 2 more AFEBs replaced dcfeb3 - link bad
+      9070         13-NOV-2019 , 20:38:20       13-11-19 19:37          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_191113_193749_UTC.raw	
+      9134         11-DEC-2019 , 17:36:19       11-12-19 16:35          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_191211_163513_UTC.raw	DCFEB2 fiber problem
+      9150         24-JAN-2020 , 15:48:42       24-01-20 14:46          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_200124_144615_UTC.raw	DCFEB2 disabled in DAQ
+      9183         29-JAN-2020 , 16:57:09       29-01-20 15:53          ME11equalizedHV0           emugif2.cern.ch:/raid/data/current/csc_00000001_EmuRUI01_Test_11_000_200129_155539_UTC.raw	
+      9220         04-MAR-2020 , 16:21:31       04-03-20 15:20          ME11equalizedHV0                        emugif5.cern.ch:/data/csc_00000001_EmuRUI01_Test_11_000_200304_152025_UTC.raw	emugif5 TMB fibers: Link good [DCFEB# 1-7]: [ 1 0 1 0 0 1 1 ] DMB fibers: [ 0 0 1 0 0 1 1 ]
+      9273         03-JUN-2020 , 18:22:37       03-06-20 16:21          ME11equalizedHV0                        emugif5.cern.ch:/data/csc_00000001_EmuRUI01_Test_11_000_200603_162151_UTC.raw	
+      9282         03-FEB-2021 , 16:16:16       03-06-20 16:25          ME11equalizedHV0                        emugif5.cern.ch:/data/csc_00000001_EmuRUI01_Test_11_000_210203_151430_UTC.raw	spareALCT, after AFEB replacement and afeb thresholds/delays update in VME.xml
+      9289         03-FEB-2021 , 20:14:24       03-02-21 19:11          ME11equalizedHV0 http://emugif5.cern.ch/data/Tests_results/Test_11_AFEBNoise/csc_00000001_EmuRUI01_Test_11_000_210203_191118_UTC.plots/	old ALCT
+      9320         17-FEB-2021 , 16:00:49       17-02-21 16:00          ME11equalizedHV0                        emugif5.cern.ch:/data/csc_00000001_EmuRUI01_Test_11_000_210217_150850_UTC.raw	4000
+      9337         26-FEB-2021 , 15:28:30       26-02-21 14:24          ME11equalizedHV0                        emugif5.cern.ch:/data/csc_00000001_EmuRUI01_Test_11_000_210226_142445_UTC.raw	ATL-MM in front on CMS-CSC
+      9372         03-MAR-2021 , 16:57:49       03-03-21 09:40          ME11equalizedHV0                        emugif5.cern.ch:/data/csc_00000001_EmuRUI01_Test_11_000_210303_155710_UTC.raw	
+      9409         10-MAR-2021 , 12:00:42       05-03-21 15:00          ME11equalizedHV0                        emugif5.cern.ch:/data/csc_00000001_EmuRUI01_Test_11_000_210310_110033_UTC.raw	
+      9459         24-MAR-2021 , 18:08:16       12-03-21 14:30          ME11equalizedHV0                        emugif5.cern.ch:/data/csc_00000001_EmuRUI01_Test_11_000_210324_170553_UTC.raw	
+      9471         25-MAR-2021 , 12:18:47       25-03-21 12:18          ME11equalizedHV0                        emugif5.cern.ch:/data/csc_00000001_EmuRUI01_Test_11_000_210325_111430_UTC.raw	
+      9474         25-MAR-2021 , 12:47:36       25-03-21 12:18          ME11equalizedHV0                        emugif5.cern.ch:/data/csc_00000001_EmuRUI01_Test_11_000_210325_114050_UTC.raw	ATL-MM ON
+      9502         31-MAR-2021 , 14:41:03       31-03-21 10:59          ME11equalizedHV0                        emugif5.cern.ch:/data/csc_00000001_EmuRUI01_Test_11_000_210331_124024_UTC.raw	
+      9516         07-APR-2021 , 14:54:58       06-04-21 09:25          ME11equalizedHV0                        emugif5.cern.ch:/data/csc_00000001_EmuRUI01_Test_11_000_210407_125258_UTC.raw	
+      9537         08-APR-2021 , 15:22:44       08-04-21 13:18          ME11equalizedHV0                        emugif5.cern.ch:/data/csc_00000001_EmuRUI01_Test_11_000_210408_131855_UTC.raw	After AFEB# 6 and 15 were replaced AND DAQ threshold update
+      9561         14-APR-2021 , 12:34:32       13-04-21 17:20          ME11equalizedHV0                        emugif5.cern.ch:/data/csc_00000001_EmuRUI01_Test_11_000_210414_103156_UTC.raw	
+      9594         21-APR-2021 , 12:35:44       14-04-21 17:15          ME11equalizedHV0                        emugif5.cern.ch:/data/csc_00000001_EmuRUI01_Test_11_000_210421_103533_UTC.raw	
+      9616         28-APR-2021 , 17:18:30       28-04-21 07:41          ME11equalizedHV0                        emugif5.cern.ch:/data/csc_00000001_EmuRUI01_Test_11_000_210428_151201_UTC.raw	1D histograms empty... But TMB and ALCT firmware seem ok. 2d histogram shows nothing out of the ordinary
+      9654         05-MAY-2021 , 16:00:45       05-05-21 13:59          ME11equalizedHV0                        emugif5.cern.ch:/data/csc_00000001_EmuRUI01_Test_11_000_210505_140022_UTC.raw	MM in front still not lifted
+      9691         12-MAY-2021 , 12:21:45       12-05-21 10:20          ME11equalizedHV0                        emugif5.cern.ch:/data/csc_00000001_EmuRUI01_Test_11_000_210512_102057_UTC.raw	MM in front still not lifted
+      9729         19-MAY-2021 , 15:54:35       19-05-21 13:36          ME11equalizedHV0                        emugif5.cern.ch:/data/csc_00000001_EmuRUI01_Test_11_000_210519_133626_UTC.raw	MM in front still not lifted
+      9762         26-MAY-2021 , 18:09:57       26-05-21 16:08          ME11equalizedHV0                        emugif5.cern.ch:/data/csc_00000001_EmuRUI01_Test_11_000_210526_160825_UTC.raw	
+      9798         02-JUN-2021 , 15:56:22       02-06-21 13:53          ME11equalizedHV0                        emugif5.cern.ch:/data/csc_00000001_EmuRUI01_Test_11_000_210602_135349_UTC.raw	
+      9833         23-JUN-2021 , 12:38:51       23-06-21 11:06          ME11equalizedHV0                        emugif5.cern.ch:/data/csc_00000001_EmuRUI01_Test_11_000_210623_103602_UTC.raw	
+      9846         30-JUN-2021 , 18:25:39       25-06-21 11:40          ME11equalizedHV0                        emugif5.cern.ch:/data/csc_00000001_EmuRUI01_Test_11_000_210630_161925_UTC.raw	After AFEB replacement - only doing tests at HV0
+      9871         07-JUL-2021 , 16:01:04       07-07-21 13:58          ME11equalizedHV0                        emugif5.cern.ch:/data/csc_00000001_EmuRUI01_Test_11_000_210707_135926_UTC.raw	
+      9913         11-AUG-2021 , 16:18:24       23-07-21 17:02          ME11equalizedHV0    emugif6.cern.ch:/storage/GIF/data/current/csc_00000001_EmuRUI01_Test_11_000_210811_141652_UTC.raw	
+      9930         06-OCT-2021 , 12:46:44       23-07-21 17:02          ME11equalizedHV0    emugif6.cern.ch:/storage/GIF/data/current/csc_00000001_EmuRUI01_Test_11_000_211006_104603_UTC.raw	After Troubleshooting ALCT issues - reuploading firmware seems to have resolved the problem - at least for now. Trying a few tests
+      9963         03-NOV-2021 , 12:11:09       03-11-21 12:09          ME11equalizedHV0    emugif6.cern.ch:/storage/GIF/data/current/csc_00000001_EmuRUI01_Test_11_000_211103_111026_UTC.raw	Now at 10% CF4
+      9994         10-NOV-2021 , 13:00:38  2021-11-10 11:56:13          ME11equalizedHV0    emugif6.cern.ch:/storage/GIF/data/current/csc_00000001_EmuRUI01_Test_11_000_211110_115234_UTC.raw	Now at 10% CF4
+     10050         02-FEB-2022 , 12:55:39  2022-02-02 12:53:32          ME11equalizedHV0    emugif6.cern.ch:/storage/GIF/data/current/csc_00000001_EmuRUI01_Test_11_000_220202_115447_UTC.raw	Now at 10% CF4
+     10148         30-MAR-2022 , 16:06:06  2022-03-30 14:05:23          ME11equalizedHV0    emugif6.cern.ch:/storage/GIF/data/current/csc_00000001_EmuRUI01_Test_11_000_220330_140534_UTC.raw	
+     10181         13-APR-2022 , 11:31:59  2022-04-13 11:30:01          ME11equalizedHV0    emugif6.cern.ch:/storage/GIF/data/current/csc_00000001_EmuRUI01_Test_11_000_220413_093116_UTC.raw	test27 (m#8178) VME.xml -> VME_ME11_ME21.xml TestSpecificVME.xml -> TestSpecificVME_ageing.xml
+     10202         23-APR-2022 , 18:47:42                 None          ME11equalizedHV0    emugif6.cern.ch:/storage/GIF/data/current/csc_00000001_EmuRUI01_Test_11_000_220423_163742_UTC.raw	1st test with ep-dt purifier VME.xml -> VME_ME11_ME21.xml TestSpecificVME.xml -> TestSpecificVME_ageing.xml
+     10251         13-JUL-2022 , 15:25:08  2022-07-13 13:24:29          ME11equalizedHV0    emugif2.cern.ch:/storage/GIF/data/current/csc_00000001_EmuRUI01_Test_11_000_220713_132332_UTC.raw	
+     10421         31-AUG-2022 , 18:13:37     2022-08-31 13:27          ME11equalizedHV0    emugif2.cern.ch:/storage/GIF/data/current/csc_00000001_EmuRUI01_Test_11_000_220831_160533_UTC.raw	5% CF4 closed loop
+     10497         07-SEP-2022 , 16:12:48  2022-09-07 16:11:11          ME11equalizedHV0    emugif2.cern.ch:/storage/GIF/data/current/csc_00000001_EmuRUI01_Test_11_000_220907_141211_UTC.raw	5% CF4 closed loop
+     10585         14-SEP-2022 , 18:28:02  2022-09-14 09:46:31          ME11equalizedHV0    emugif2.cern.ch:/storage/GIF/data/current/csc_00000001_EmuRUI01_Test_11_000_220914_162321_UTC.raw	5% CF4 closed loop
+     10664         21-SEP-2022 , 18:45:33  2022-09-21 09:07:31          ME11equalizedHV0    emugif2.cern.ch:/storage/GIF/data/current/csc_00000001_EmuRUI01_Test_11_000_220921_164109_UTC.raw	5% CF4 closed loop
+     10692         28-SEP-2022 , 14:17:19  2022-09-28 14:15:13          ME11equalizedHV0    emugif2.cern.ch:/storage/GIF/data/current/csc_00000001_EmuRUI01_Test_11_000_220928_121607_UTC.raw	5% CF4 closed loop Reference currents with source ON.
+     10781         05-OCT-2022 , 13:10:36   2022-10-5 09:50:00          ME11equalizedHV0    emugif2.cern.ch:/storage/GIF/data/current/csc_00000001_EmuRUI01_Test_11_000_221005_110628_UTC.raw	5% CF4 closed loop For dark rates: 11,11c: 30s 27s: 50000events
+     10861         12-OCT-2022 , 13:41:17  2022-10-12 08:57:00          ME11equalizedHV0    emugif2.cern.ch:/storage/GIF/data/current/csc_00000001_EmuRUI01_Test_11_000_221012_113644_UTC.raw	5% CF4 closed loop Dark rates test 11: 30s Dark rates test 27s: 50k Events
+done
