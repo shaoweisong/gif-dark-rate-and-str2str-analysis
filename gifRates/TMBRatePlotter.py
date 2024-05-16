@@ -1,5 +1,5 @@
 import argparse
-from ROOT import gROOT, TCanvas, TLegend, TGraph, TDatime, TH2F, gStyle, kRed, kBlue, kBlack, kMagenta, TFile
+from ROOT import gROOT, TCanvas, TLegend, TGraph, TDatime, TH2F, gStyle, kRed, kBlue, kBlack, kMagenta, TFile, TLatex, TLine
 from datetime import datetime
 gStyle.SetOptStat(0)
 
@@ -14,7 +14,7 @@ parser.add_argument('--clctnum', action='store', default=16, type=int, help=" Av
 parser.add_argument('--startdate', action='store', default="01 SEP 2015", type=str, help="Starting date: write as DD MTH YYYY where MTH is the 3 letter abbreviation for the month\n DEFAULT: 01 SEP 2017")
 parser.add_argument('--timeplot', action='store_true', default=False, help="Plot with time as the x axis as opposed to charge\n DEFAULT: False")
 parser.add_argument('--tenpctzero', action='store_true', help=" Plotting over the entire region of charge accumulation or just for 2 percent CF4\n DEFAULT: False")
-parser.add_argument('--validatewithold', action='store_true', help=" For validating with Long Wang's Old Results\n DEFAULT: False")
+parser.add_argument('--validatewithold', action='store_true',default = False, help=" For validating with Long Wang's Old Results\n DEFAULT: False")
 parser.add_argument('--plotproblem', action='store_true', help=" Plot problem WG 5 in layer 5 me11 vs normal WG 4\n DEFAULT: False")
 parser.add_argument('--plotcathodes', action='store_true', help="Show CFEB and CLCT plots or no\n DEFAULT: False")
 parser.add_argument('--plotname', action='store', type=str, default='Sept17-Jun21', help="Name of output plots\n DEFAULT: Sept17-Jun21")
@@ -26,21 +26,25 @@ parser.add_argument('--DatT11', action ='store', default='anode_me11_2pct.txt', 
 
 args = parser.parse_args()
 class Legend:
-    def __init__(self, xmin=0.1, ymin=0.7, xmax=0.3, ymax=0.9):
+    def __init__(self, xmin=0.2, ymin=0.7, xmax=0.4, ymax=0.85):
         self.legend = TLegend(xmin, ymin, xmax, ymax)
-        self.legend.SetHeader("Legend", "C")
+        self.legend.SetBorderSize(0)
+        self.legend.SetHeader("ME21", "C") if args.plotname == 'ME21_TMB' else self.legend.SetHeader("ME11", "C")
+        self.header = self.legend.GetListOfPrimitives().First()
+        self.header.SetTextSize(0.05)
     def fill(self, tgraphs):
         for tgraph in tgraphs:
-            self.legend.AddEntry(tgraph.graph, tgraph.title, "lp")
+            self.legend.AddEntry(tgraph.graph, tgraph.title, "p")
     def draw(self):
         self.legend.Draw()
 class Graph:
-    def __init__(self, length, name, color, cathodeOrTMB = False, correction=False):
+    def __init__(self, length, name, color, cathodeOrTMB = False, correction=False, markstyle=21):
         self.graph = TGraph(length)
         self.title = name
         self.color = color
         self.iscorrection = correction
         self.iscathodeortmb = correction
+        self.markstyle = markstyle
     def fill(self, i, xpoint, ypoint):
         self.graph.SetPoint(i, xpoint, ypoint)
     def draw(self):
@@ -48,28 +52,40 @@ class Graph:
         self.graph.SetMarkerSize(2)
         if self.iscorrection:
             self.graph.SetLineColor(kBlack)
-            self.graph.SetMarkerStyle(24)
+            self.graph.SetMarkerStyle(self.markstyle)
         elif self.iscathodeortmb:
             self.graph.SetLineColor(self.color)
             self.graph.SetMarkerStyle(21)
         else:
             self.graph.SetLineColor(self.color)
             self.graph.SetMarkerStyle(20)
-        self.graph.Draw("PL SAME")
+        self.graph.Draw("P ")
 class Limits:
     def __init__(self, innername, title, xtitle, ytitle, xbins, xmin, xmax, ybins, ymin, ymax):
         self.lims = TH2F(innername, title+";"+ xtitle + ";" + ytitle, xbins, xmin, xmax, ybins, ymin, ymax)
         self.lims.Draw()
         self.lims.GetXaxis().SetLabelSize(0.03)
         self.lims.GetYaxis().SetLabelSize(0.03)
-        self.lims.GetYaxis().SetTitleSize(0.08)
-        self.lims.GetYaxis().SetTitleOffset(0.5)
+        self.lims.GetYaxis().SetTitleSize(0.05)
+        self.lims.GetYaxis().SetTitleOffset(0.6)
         if args.timeplot:
             self.lims.GetXaxis().SetTimeDisplay(1)
             self.lims.GetXaxis().SetTimeOffset(0)
             self.lims.GetXaxis().SetTimeFormat("%d.%b.%Y")
             #self.lims.GetXaxis().SetNdivisions(507)
             #self.lims.GetXaxis().SetTimeOffset(24, "gmt")
+
+
+def MakeCMSandLumiLabel():
+    cms=TLatex()
+    cms.SetTextSize(0.03)
+    #cms.DrawLatexNDC(0.10, 0.91, '#scale[1.5]{CMS}#font[12]{preliminary}')
+    lumi=TLatex()
+    lumi.SetTextSize(0.03)
+    lumi.SetTextAlign(31)
+    #lumi.DrawLatexNDC(0.90, 0.91, "GIF++")
+    return cms,lumi
+
 
 starttime = datetime.strptime(args.startdate, "%d %b %Y")
 tmbdump_0v = []
@@ -204,15 +220,20 @@ if len(rootfiles) != len(tmbdump_0v):
 #produce final arrays for plotting
 #plotALCTrates_Q = TGraph(len(tmbdump_hv0))
 if args.test11compare:
-    plotALCTrates = Graph(len(tmbdump_hv0), "TMB Dump ALCT0 Rate", kRed+3)
-    plotTest11_TotalHitClusterRates = Graph(len(tmbdump_hv0), "Total Anode Hit Cluster Rate", kBlue)
-    plotTest11_TotalHitCluster_MinusMuonRates = Graph(len(tmbdump_hv0), "Single Layer Anode Hit Cluster Rate", kBlue+3)
+    plotALCTrates = Graph(len(tmbdump_hv0), "TMB Dump ALCT0 Rate", kRed+3,markstyle = 20)
+    plotTest11_TotalHitClusterRates = Graph(len(tmbdump_hv0), "Total Anode Hit Cluster Rate", kBlue, markstyle = 21)
+    plotTest11_TotalHitCluster_MinusMuonRates = Graph(len(tmbdump_hv0), "Single Layer Anode Hit Cluster Rate", kBlue+3, markstyle = 22)
     #plotTest11_TotalHitClusterRates_Q = TGraph(len(tmbdump_hv0))
     #plotTest11_TotalHitCluster_MinusMuonRates_Q = TGraph(len(tmbdump_hv0))
 else:
-    plotALCTrates = Graph(len(tmbdump_hv0), "ALCT", kRed+3)
-    plotCorrALCTrates = Graph(len(tmbdump_hv0), "ALCT Corrected", kRed+3, False, True)
-    plotTMBrates = Graph(len(tmbdump_hv0), "TMB (ALCT*CLCT)", kBlue+3, True)
+    #plotALCTrates = Graph(len(tmbdump_hv0), "ALCT", kRed+3,markstyle = 20)
+    #plotALCTrates = Graph(len(tmbdump_hv0), "ALCT", 46,markstyle = 20)
+    plotALCTrates = Graph(len(tmbdump_hv0), "ALCT", 28,False, True, markstyle = 21)
+    #plotCorrALCTrates = Graph(len(tmbdump_hv0), "ALCT Corrected", kRed+3, False, True)
+    #plotCorrALCTrates = Graph(len(tmbdump_hv0), "ALCT Corrected", kRed+3, False, True, markstyle = 21)
+    plotCorrALCTrates = Graph(len(tmbdump_hv0), "ALCT Corrected", 28, False, True, markstyle = 21)
+    #plotTMBrates = Graph(len(tmbdump_hv0), "TMB (ALCT*CLCT)", kBlue+3, True,markstyle = 22)
+    plotTMBrates = Graph(len(tmbdump_hv0), "ALCT*CLCT", 3,False, True,markstyle = 22)
     if args.plotproblem:
         plotProblemWGrates = Graph(len(tmbdump_hv0), "Problem WG 5 Layer 5", kRed+3)
         plotNormalWGrates = Graph(len(tmbdump_hv0), "Normal WG 4 Layer 5", kBlue+3)
@@ -227,7 +248,7 @@ else:
     #plotTMBrates_Q = TGraph(len(tmbdump_hv0))
 rmax = 0
 rmin = 1000000000000
-qmax = 500
+qmax = 550
 j=0
 tdtmin = datetime.strptime(tmbdump_0v[0][0], "%d-%b-%Y, %H:%M:%S") 
 tdtmax = datetime.strptime(tmbdump_0v[len(tmbdump_hv0)-1][0], "%d-%b-%Y, %H:%M:%S") 
@@ -327,9 +348,9 @@ if args.test11compare:
     Test11CompareCanvas = TCanvas("Test11CompareCanvas", "Anode Dark Rate Comparison", 200, 10, 1400, 1000)
     Test11CompareCanvas.cd()
     if args.timeplot:
-        Test11CompareLims = Limits("t11comparelimits", "ALCT Rates Test 11 vs TMB dumps", "Date of Measurement", "Dark Rate (kHz)", 1000, tmin-fivedays, tmax+fivedays, 100, 0, 2)
+        Test11CompareLims = Limits("t11comparelimits", "ALCT Rates Test 11 vs TMB dumps", "Date of Measurement", "Dark Rate [kHz]", 1000, tmin-fivedays, tmax+fivedays, 100, 0, 2)
     else:
-        Test11CompareLims = Limits("t11comparelimits", "ALCT Rates Test 11 vs TMB dumps", "Accumulated Charge (mC/cm)", "Dark Rate (kHz)", 1000, 330, qmax + 10, 100, 0, 2)
+        Test11CompareLims = Limits("t11comparelimits", "ALCT Rates Test 11 vs TMB dumps", "Accumulated Charge [mC/cm]", "Dark Rate [kHz]", 1000, 330, qmax + 10, 100, 0, 2)
     plotALCTrates.draw()
     plotTest11_TotalHitClusterRates.draw()
     plotTest11_TotalHitCluster_MinusMuonRates.draw()
@@ -342,9 +363,9 @@ elif args.plotproblem:
     ProblemCanvas.SetLogy()
     ProblemCanvas.cd()
     if args.timeplot:
-        ProblemLimits = Limits("problemlimits", "Problem WG vs Normal", "Date of Measurement", "Dark Rate (Hz)", 1000, tmin-fivedays, tmax+fivedays, 100, 10**(-1), 10**4)
+        ProblemLimits = Limits("problemlimits", "Problem WG vs Normal", "Date of Measurement", "Dark Rate [Hz]", 1000, tmin-fivedays, tmax+fivedays, 100, 10**(-1), 10**4)
     else:
-        ProblemLimits = Limits("problemlimits", "Problem WG vs Normal", "Accumulated Charge (mC/cm)", "Dark Rate (Hz)", 1000, 330, 750, 100, 10**(-1), 10**4)
+        ProblemLimits = Limits("problemlimits", "Problem WG vs Normal", "Accumulated Charge [mC/cm]", "Dark Rate [Hz]", 1000, 330, 750, 100, 10**(-1), 10**4)
     plotProblemWGrates.draw()
     plotNormalWGrates.draw()
     ProblemLegend = Legend()
@@ -355,22 +376,72 @@ else:
     TMBRateCanvas = TCanvas("TMBRateCanvas", "Dark rate vs Time", 200, 10, 1400, 1000)
     TMBRateCanvas.cd()
     if args.timeplot:
-        TMBRateLimits = Limits("TMBRatelimits", "Dark Rates", "Date of Measurement", "Dark Rate (kHz)", 1000, tmin-fivedays, tmax+fivedays, 100, 0, 10)
+        print("[INFO] timeplot")
+        #TMBRateLimits = Limits("TMBRatelimits", "Dark Rates", "Date of Measurement", "Dark Rate [kHz]", 1000, tmin-fivedays, tmax+fivedays, 100, 0, 10)
+        TMBRateLimits = Limits("TMBRatelimits", "Dark Rates", "Date of Measurement", "Dark Rate [kHz]", 600, tmin-fivedays, tmax+fivedays, 100, 0, 10)
     elif args.validatewithold:
-        TMBRateLimits = Limits("TMBRatelimits", "TMB Dump Dark Rates", "Accumulated Charge (mC/cm)", "Dark Rate (kHz)", 1000, 0, 500, 100, 0, 5)
+        print("[INFO] validatewithold")
+        #TMBRateLimits = Limits("TMBRatelimits", "TMB Dump Dark Rates", "Accumulated Charge [mC/cm]", "Dark Rate [kHz]", 1000, 0, 500, 100, 0, 5)
+        TMBRateLimits = Limits("TMBRatelimits", "TMB Dump Dark Rates", "Accumulated Charge [mC/cm]", "Dark Rate [kHz]", 600, 0, 500, 100, 0, 5)
     else:
         print(qmax)
-        TMBRateLimits = Limits("TMBRatelimits", "TMB Dump Dark Rates", "Accumulated Charge (mC/cm)", "Dark Rate (kHz)", 1000, qtot[0], qmax + 10, 100, 0, 8)
+        #TMBRateLimits = Limits("TMBRatelimits", "TMB Dump Dark Rates", "Accumulated Charge [mC/cm]", "Dark Rate [kHz]", 1000, qtot[0], qmax + 150, 100, 0, 8)
+        #TMBRateLimits = Limits("TMBRatelimits", "TMB Dump Dark Rates", "Accumulated Charge [mC/cm]", "Dark Rate [kHz]", 1000, qtot[0], qmax + 150, 100, 0, 3)
+        if args.plotname == 'ME21_TMB':
+            TMBRateLimits = Limits("TMBRatelimits","", "Accumulated Charge [mC/cm]", "Dark Rate [kHz]", 1000, qtot[0], qmax+280 , 100, 0, 6)
+        else:
+            TMBRateLimits = Limits("TMBRatelimits","", "Accumulated Charge [mC/cm]", "Dark Rate [kHz]", 1000, qtot[0], qmax , 100, 0, 3)
     plotALCTrates.draw()
+    if args.plotname == 'ME11_TMB':
+        accumulated_charge_value = 700
+        dashed_line = TLine(accumulated_charge_value, TMBRateLimits.lims.GetYaxis().GetXmin(), accumulated_charge_value, TMBRateLimits.lims.GetYaxis().GetXmax())
+        dashed_line.SetLineStyle(2)
+        dashed_line.SetLineColor(kBlack)
+        dashed_line.Draw()
+        latex_2pct_CF4 = TLatex()
+        latex_2pct_CF4.SetTextSize(0.03)
+        latex_2pct_CF4.SetTextAlign(12)
+        latex_2pct_CF4.DrawLatex(accumulated_charge_value - 50, 2, "2% CF_{4}")
+        latex_5pct_CF4 = TLatex()
+        latex_5pct_CF4.SetTextSize(0.03)
+        latex_5pct_CF4.SetTextAlign(12)
+        latex_5pct_CF4.DrawLatex(accumulated_charge_value + 50, 2, "5% CF_{4}")
+        plotALCTrates.draw()
+        plotCorrALCTrates.draw()
+        toplot = [plotALCTrates, plotCorrALCTrates, plotTMBrates]
+    else:
+        accumulated_charge_value = 310
+        dashed_line = TLine(accumulated_charge_value, TMBRateLimits.lims.GetYaxis().GetXmin(), accumulated_charge_value, TMBRateLimits.lims.GetYaxis().GetXmax())
+        dashed_line.SetLineStyle(2)
+        dashed_line.SetLineColor(kBlack)
+        dashed_line.Draw()
+        latex_2pct_CF4 = TLatex()
+        latex_2pct_CF4.SetTextSize(0.03)
+        latex_2pct_CF4.SetTextAlign(12)
+        latex_2pct_CF4.DrawLatex(accumulated_charge_value - 100, 3.5, "10% CF_{4}")
+        latex_5pct_CF4 = TLatex()
+        latex_5pct_CF4.SetTextSize(0.03)
+        latex_5pct_CF4.SetTextAlign(12)
+        latex_5pct_CF4.DrawLatex(accumulated_charge_value + 50, 3.5, "5% CF_{4}")
+        plotALCTrates.draw()
+        toplot = [plotALCTrates, plotTMBrates]
+    plotCorrALCTrates.draw()
+    plotTMBrates.draw()
     plotCorrALCTrates.draw()
     plotTMBrates.draw()
     #A chambertype parameter is necessary
-    #toplot = [plotALCTrates, plotCorrALCTrates, plotTMBrates]
-    toplot = [plotALCTrates, plotTMBrates]
+    #toplot = [plotALCTrates, plotTMBrates]
     if args.plotcathodes:
         plotCFEBrates.draw()
         plotCLCTrates.draw()
         toplot += [plotCFEBrates, plotCLCTrates]
+
+    cms_label,lumi_label = MakeCMSandLumiLabel()
+    cms_label.DrawLatexNDC(0.10, 0.91, '#scale[1.5]{CMS MUON }#font[12]{preliminary}')
+    cms_label.Draw('same')
+    lumi_label.DrawLatexNDC(0.90, 0.91, "GIF++")
+    lumi_label.Draw('same')
+
     TMBDumpLegend = Legend()
     TMBDumpLegend.fill(toplot)
     TMBDumpLegend.draw()

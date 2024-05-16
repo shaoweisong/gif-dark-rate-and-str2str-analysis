@@ -119,6 +119,7 @@ if args.tmbnorm:
         print "TMB dump measurements: ", len(tmbdump_alctrates), "Test 11 measurements: ", len(rootfiles)
         quit()
 zeropoint = ''
+print plus300
 if plus300: 
     for i in xrange(len(charges)):
         charges[i] += 330
@@ -156,6 +157,7 @@ class Layer:
         domain = charges
         domain.append(domain[-1] +5)
         self.num = int(layernum+1)
+        # TH2F("L1","L1",ncharge,chargelist.append(charges[-1]+5),49,0,50)
         self.hist = TH2F("L"+str(self.num)+name, "L"+str(self.num)+name, nmeas, domain, self.nwg+1, 0, self.nwg+2)
         self.hist.GetXaxis().SetTitle("Accumulated charge [mC/cm]")
         self.hist.GetYaxis().SetTitle("Wire group")
@@ -252,6 +254,7 @@ for i in xrange(6):
         LayersTMB.append(liTMB)
 # filling histograms for each layer for each measurement
 if Test11_Total_Hit_clusters_minus_muons:
+    print len(Test11_Total_Hit_clusters_minus_muonsrates)
     for imeas, anoderate in enumerate(Test11_Total_Hit_clusters_minus_muonsrates):
         measfile = TFile(rootfiles[imeas], "read")
         for iL, layer in enumerate(LayersTotal_Hit_clusters_minus_muons):
