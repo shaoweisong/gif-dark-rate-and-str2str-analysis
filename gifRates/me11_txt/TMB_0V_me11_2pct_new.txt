@@ -1,0 +1,13 @@
+connecting...
+ok
+ select MEASUR_NUM, TIME_SAVE, TEST_START, ME11_state, HV_ME11, HV_SETTING1, RUN_COMMENT, SOURCE_STATE,  ATTENUAT_UP, TMB_DUMP_TIME from gif_ageing_tab  where  MEASUR_TYPE='Dark rate' and RUN_TYPE='TMB dump (test 27s)' and ME11_state='on'  and HV_SETTING1 like '%HV0%' order by MEASUR_NUM 
+
+
+   A#                start time                        HV SRCdwn t[sec]       0ALCT:      13CLCT:      14CLCT:      15CLCT:      16CLCT:      17CLCT:      18CLCT:      19CLCT:      20CLCT:         TMB:         L1A:    comment
+10835    12-OCT-2022 , 10:59:03                         0    off    10            2            0            0            0            0            0            0            0            0            0            0     5% CF4 closed loop Dark rates test 11: 30s Dark rates test 27s: 50k Events
+11496    05-APR-2023 , 11:06:31                         0    off    10            1            0            0            0            0            0            0            0            0            0            0     closed loop
+11742    12-MAY-2023 , 10:28:37                         0    off    10            0            0            0            0            0            0            0            0            0            0            0     loop close
+12081    09-AUG-2023 , 15:16:15                         0    off    10            0            0            0            0            0            0            0            0            0            0            0     after LV recycling
+12210    16-AUG-2023 , 16:22:57                         0    off    10            0            0            0            0            0            0            0            0            0            0            0     after LV recycling
+12860    21-FEB-2024 , 13:59:26                         0    off    10            0            0            0            0            0            0            0            0            0            0            0     5% open loop low rate on CFEB3 also with extension cables
+13139    27-MAR-2024 , 09:54:27                         0    off    10            0            0            0            0            0            0            0            0            0            0            0     

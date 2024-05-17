@@ -1,0 +1,13 @@
+connecting...
+ok
+ select MEASUR_NUM, TIME_SAVE, TEST_START, ME11_state, HV_ME11, HV_SETTING1, RUN_COMMENT, SOURCE_STATE,  ATTENUAT_UP, TMB_DUMP_TIME from gif_ageing_tab  where  MEASUR_TYPE='Dark rate' and RUN_TYPE='TMB dump (test 27s)' and ME11_state='on'  and HV_SETTING1 like '%HV0%' order by MEASUR_NUM 
+
+
+   A#                start time                        HV SRCdwn t[sec]       0ALCT:      13CLCT:      14CLCT:      15CLCT:      16CLCT:      17CLCT:      18CLCT:      19CLCT:      20CLCT:         TMB:         L1A:    comment
+11497    12-OCT-2022 , 11:18:47                      2100    off    10          421           44           16           14           12            0            1            2            3           42           42     closed loop
+11497    05-APR-2023 , 11:18:47                      2100    off    10          435           44           16           14           12            0            1            2            3           42           42     closed loop
+11743    12-MAY-2023 , 10:38:00                      2100    off    10          376           30            8            8            7            1            4            3            1           25           25     loop close
+12082    09-AUG-2023 , 15:20:42                      2100    off    10          347           27           10            9            9            3            2            0            1           21           21     after LV recycling
+12211    16-AUG-2023 , 16:27:09                      2100    off    10          413           43           15           18            7            1            8            1            3           39           39     after LV recycling
+12861    21-FEB-2024 , 14:24:58                      2100    off    10          361           29           13           10            7            2            2            0            1           25           25     5% open loop low rate on CFEB3 also with extension cables
+13140    27-MAR-2024 , 10:06:04                      2100    off    10          492           75           28           27           19            3            7            4            4           62           62     

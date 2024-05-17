@@ -1,0 +1,13 @@
+connecting...
+ok
+ select MEASUR_NUM, TIME_SAVE, TEST_START, ME11_state, HV_ME11, HV_SETTING1, RUN_COMMENT, SOURCE_STATE,  ATTENUAT_UP, TMB_DUMP_TIME from gif_ageing_tab  where  MEASUR_TYPE='Dark rate' and RUN_TYPE='TMB dump (test 27s)' and ME11_state='on'  and HV_ME11=0 order by MEASUR_NUM 
+
+
+   A#                start time                        HV SRCdwn t[sec]       0ALCT:      13CLCT:      14CLCT:      15CLCT:      16CLCT:      17CLCT:      18CLCT:      19CLCT:      20CLCT:         TMB:         L1A:    comment
+10848    12-OCT-2022 , 11:51:43                      2700    off    10         7220         5286         1532         1589         1546          204          498          520          466         5157            0     5% CF4 closed loop Dark rates test 11: 30s Dark rates test 27s: 50k Events
+11510    05-APR-2023 , 12:04:21                      2700    off    10         6620         4849         1335         1458         1442          211          419          501          467         4690            0     
+11757    12-MAY-2023 , 11:12:30                      2700    off    10         6799         5036         1378         1508         1489          235          479          483          482         4924         4924     loop close
+12096    09-AUG-2023 , 15:58:16                      2700    off    10         7031         5119         1374         1514         1496          221          505          506          502         5025         5024     after LV recycling
+12225    16-AUG-2023 , 16:57:55                      2700    off    10         6917         5161         1397         1549         1517          213          496          546          481         5018         5018     after LV recycling
+12876    21-FEB-2024 , 15:04:38                      2700    off    10         6751         4856         1334         1418         1494          201          462          482          436         4785         4785     5% open loop low rate on CFEB3 also with extension cables
+13154    27-MAR-2024 , 10:40:05                      2700    off    10         6772         5104         1458         1521         1512          223          483          481          470         5013         5013     

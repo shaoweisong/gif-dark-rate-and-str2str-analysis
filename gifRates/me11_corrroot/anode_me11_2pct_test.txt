@@ -1,0 +1,8 @@
+Processed root file        charge                Date      
+me11_corrroot/12_OCT_2022.root      399.69       12-OCT-2022
+me11_corrroot/05_APR_2023.root      438.89       05-APR-2023
+me11_corrroot/12_May_2023.root      443.65       12-May-2023
+me11_corrroot/09_AUG_2023.root      457.65       09-AUG-2023
+me11_corrroot/16_AUG_2023.root      460.91       16-AUG-2023
+me11_corrroot/21_Feb_2024.root      486.69      21-Feb-2024
+me11_corrroot/27_Mar_2024.root      500.34      27-Mar-2024
