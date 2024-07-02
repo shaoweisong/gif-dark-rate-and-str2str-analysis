@@ -55,12 +55,12 @@ me21data/A11242.root      523.12              01-MAR-2023
 me21data/A11557.root      572.30              05-APR-2023
 me21data/A11639.root      577.23              12-APR-2023
 me21data/A12060.root      600.48              28-JUN-2023
-me21data/A12144.root      627.93              09-AUG-2023             dose 
-me21data/A12191.root      639.13              16-AUG-2023            289.781
-me21data/A12272.root      651.65              06-SEP-2023            306.180
-me21data/A12434.root      651.65              25-OCT-2023            314.255   
-me21data/A12842.root      756.54              21-Feb-2024            370.926
-me21data/A12960.root      776.48              06-MAR-2024            389.460
-me21data/A13204.root      815.39              08-MAY-2024            428.371
-me21data/A13317.root      815.40              29-MAY-2024            428.372 
-me21data/A13363.root      825.08              05-Jun-2024            438.058
+me21data/A12144.root      627.93              09-AUG-2023           
+me21data/A12191.root      639.13              16-AUG-2023           
+me21data/A12272.root      655.53              06-SEP-2023            
+me21data/A12434.root      663.60              25-OCT-2023         
+me21data/A12842.root      720.27              21-Feb-2024           
+me21data/A12960.root      738.81              06-MAR-2024            
+me21data/A13204.root      777.72              08-MAY-2024         
+me21data/A13317.root      777.73              29-MAY-2024           
+me21data/A13363.root      787.41              05-Jun-2024           

@@ -73,3 +73,5 @@ me11data/A12713.root      482.97      29-NOV-2023
 me11data/A12862.root      486.69      21-Feb-2024
 me11data/A13158.root      500.34      27-Mar-2024
 me11data/A13241.root      500.35      08-May-2024
+me11data/A13274.root      500.36      29-May-2024
+me11data/A13400.root      504.09      05-Jun-2024
