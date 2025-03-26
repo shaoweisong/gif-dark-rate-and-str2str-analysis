@@ -26,7 +26,7 @@ parser.add_argument('--DatT11', action ='store', default='anode_me11_2pct.txt', 
 
 args = parser.parse_args()
 class Legend:
-    def __init__(self, xmin=0.2, ymin=0.7, xmax=0.4, ymax=0.85):
+    def __init__(self, xmin=0.15, ymin=0.7, xmax=0.4, ymax=0.85):
         self.legend = TLegend(xmin, ymin, xmax, ymax)
         self.legend.SetBorderSize(0)
         self.legend.SetHeader("ME21", "C") if args.plotname == 'ME21_TMB' else self.legend.SetHeader("ME11", "C")
@@ -65,8 +65,9 @@ class Limits:
         self.lims = TH2F(innername, title+";"+ xtitle + ";" + ytitle, xbins, xmin, xmax, ybins, ymin, ymax)
         self.lims.Draw()
         self.lims.GetXaxis().SetLabelSize(0.03)
+        self.lims.GetXaxis().SetTitleSize(0.045)
         self.lims.GetYaxis().SetLabelSize(0.03)
-        self.lims.GetYaxis().SetTitleSize(0.05)
+        self.lims.GetYaxis().SetTitleSize(0.045)
         self.lims.GetYaxis().SetTitleOffset(0.6)
         if args.timeplot:
             self.lims.GetXaxis().SetTimeDisplay(1)
@@ -78,10 +79,10 @@ class Limits:
 
 def MakeCMSandLumiLabel():
     cms=TLatex()
-    cms.SetTextSize(0.03)
+    cms.SetTextSize(0.045)
     #cms.DrawLatexNDC(0.10, 0.91, '#scale[1.5]{CMS}#font[12]{preliminary}')
     lumi=TLatex()
-    lumi.SetTextSize(0.03)
+    lumi.SetTextSize(0.045)
     lumi.SetTextAlign(31)
     #lumi.DrawLatexNDC(0.90, 0.91, "GIF++")
     return cms,lumi
@@ -228,12 +229,12 @@ if args.test11compare:
 else:
     #plotALCTrates = Graph(len(tmbdump_hv0), "ALCT", kRed+3,markstyle = 20)
     #plotALCTrates = Graph(len(tmbdump_hv0), "ALCT", 46,markstyle = 20)
-    plotALCTrates = Graph(len(tmbdump_hv0), "ALCT", 28,False, True, markstyle = 21)
+    plotALCTrates = Graph(len(tmbdump_hv0), "Wires", 28,False, True, markstyle = 21)
     #plotCorrALCTrates = Graph(len(tmbdump_hv0), "ALCT Corrected", kRed+3, False, True)
     #plotCorrALCTrates = Graph(len(tmbdump_hv0), "ALCT Corrected", kRed+3, False, True, markstyle = 21)
     plotCorrALCTrates = Graph(len(tmbdump_hv0), "ALCT Corrected", 28, False, True, markstyle = 21)
     #plotTMBrates = Graph(len(tmbdump_hv0), "TMB (ALCT*CLCT)", kBlue+3, True,markstyle = 22)
-    plotTMBrates = Graph(len(tmbdump_hv0), "ALCT*CLCT", 3,False, True,markstyle = 22)
+    plotTMBrates = Graph(len(tmbdump_hv0), "Wires*Strips", 3,False, True,markstyle = 22)
     if args.plotproblem:
         plotProblemWGrates = Graph(len(tmbdump_hv0), "Problem WG 5 Layer 5", kRed+3)
         plotNormalWGrates = Graph(len(tmbdump_hv0), "Normal WG 4 Layer 5", kBlue+3)
@@ -277,7 +278,6 @@ for i in xrange(len(tmbdump_hv0)):
         l5bad = t11hist.GetBinContent(7)/30
         l5good = t11hist.GetBinContent(8)/30
         corralct = alct - l5bad + l5good
-        print("alct: "+str(alct)+" l5bad: "+str(l5bad)+" l5good: "+str(l5good))
         if args.plotcathodes:
             cfeb = tmbdump_hv0[i][4]/thv0 - tmbdump_0v[i][4]/t0v
             clct = tmbdump_hv0[i][5]/thv0 - tmbdump_0v[i][5]/t0v
@@ -365,7 +365,7 @@ elif args.plotproblem:
     if args.timeplot:
         ProblemLimits = Limits("problemlimits", "Problem WG vs Normal", "Date of Measurement", "Dark Rate [Hz]", 1000, tmin-fivedays, tmax+fivedays, 100, 10**(-1), 10**4)
     else:
-        ProblemLimits = Limits("problemlimits", "Problem WG vs Normal", "Accumulated Charge [mC/cm]", "Dark Rate [Hz]", 1000, 330, 750, 100, 10**(-1), 10**4)
+        ProblemLimits = Limits("problemlimits", "Problem WG vs Normal", "Accumulated Charge [mC/cm]", "Dark Rate [Hz]", 1000, 330, 800, 100, 10**(-1), 10**4)
     plotProblemWGrates.draw()
     plotNormalWGrates.draw()
     ProblemLegend = Legend()
@@ -384,11 +384,8 @@ else:
         #TMBRateLimits = Limits("TMBRatelimits", "TMB Dump Dark Rates", "Accumulated Charge [mC/cm]", "Dark Rate [kHz]", 1000, 0, 500, 100, 0, 5)
         TMBRateLimits = Limits("TMBRatelimits", "TMB Dump Dark Rates", "Accumulated Charge [mC/cm]", "Dark Rate [kHz]", 600, 0, 500, 100, 0, 5)
     else:
-        print(qmax)
-        #TMBRateLimits = Limits("TMBRatelimits", "TMB Dump Dark Rates", "Accumulated Charge [mC/cm]", "Dark Rate [kHz]", 1000, qtot[0], qmax + 150, 100, 0, 8)
-        #TMBRateLimits = Limits("TMBRatelimits", "TMB Dump Dark Rates", "Accumulated Charge [mC/cm]", "Dark Rate [kHz]", 1000, qtot[0], qmax + 150, 100, 0, 3)
         if args.plotname == 'ME21_TMB':
-            TMBRateLimits = Limits("TMBRatelimits","", "Accumulated Charge [mC/cm]", "Dark Rate [kHz]", 1000, qtot[0], qmax+280 , 100, 0, 6)
+            TMBRateLimits = Limits("TMBRatelimits","", "Accumulated Charge [mC/cm]", "Dark Rate [kHz]", 1000, qtot[0], qmax+350 , 100, 0, 6)
         else:
             TMBRateLimits = Limits("TMBRatelimits","", "Accumulated Charge [mC/cm]", "Dark Rate [kHz]", 1000, qtot[0], qmax , 100, 0, 3)
     plotALCTrates.draw()
@@ -416,13 +413,13 @@ else:
         dashed_line.SetLineColor(kBlack)
         dashed_line.Draw()
         latex_2pct_CF4 = TLatex()
-        latex_2pct_CF4.SetTextSize(0.03)
+        latex_2pct_CF4.SetTextSize(0.04)
         latex_2pct_CF4.SetTextAlign(12)
-        latex_2pct_CF4.DrawLatex(accumulated_charge_value - 100, 3.5, "10% CF_{4}")
+        latex_2pct_CF4.DrawLatex(accumulated_charge_value/2-35, 3.5, '#font[12]{10% CF_{4}}')
         latex_5pct_CF4 = TLatex()
-        latex_5pct_CF4.SetTextSize(0.03)
+        latex_5pct_CF4.SetTextSize(0.04)
         latex_5pct_CF4.SetTextAlign(12)
-        latex_5pct_CF4.DrawLatex(accumulated_charge_value + 50, 3.5, "5% CF_{4}")
+        latex_5pct_CF4.DrawLatex((accumulated_charge_value + TMBRateLimits.lims.GetXaxis().GetXmax())/2-35, 3.5,'#font[12]{5% CF_{4}}')
         plotALCTrates.draw()
         toplot = [plotALCTrates, plotTMBrates]
     plotCorrALCTrates.draw()
@@ -437,7 +434,11 @@ else:
         toplot += [plotCFEBrates, plotCLCTrates]
 
     cms_label,lumi_label = MakeCMSandLumiLabel()
-    cms_label.DrawLatexNDC(0.10, 0.91, '#scale[1.5]{CMS MUON }#font[12]{preliminary}')
+    cms_label.DrawLatexNDC(0.10, 0.91, '#scale[1.]{CMS}')
+    prelim_label = TLatex()
+    prelim_label.SetTextSize(0.05)  
+    prelim_label.DrawLatexNDC(0.18, 0.915, '#font[11]{preliminary}')
+    # cms_label.DrawLatexNDC(0.10, 0.91, '#scale[1.5]{CMS} #font[12]{preliminary}')
     cms_label.Draw('same')
     lumi_label.DrawLatexNDC(0.90, 0.91, "GIF++")
     lumi_label.Draw('same')

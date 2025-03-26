@@ -44,14 +44,14 @@ python TMBRatePlotter_new.py --tenpctzero --charges me11_txt/charges_me11_2pct_n
 ./NewTest11.sh csc_00000001_EmuRUI01_Test_11_000_240327_093509_UTC 13152 me11data_2700 100000
 python TMBRatePlotter_new.py --tenpctzero --charges me11_txt/charges_me11_2pct_new.txt --Dat0V me11_txt/TMB_0V_me11_2pct_new.txt --DatHV0 me11_txt/TMB_2700V_me11_2pct.txt --DatT11 me11_txt/anode_me11_2pct_2700.txt --plotname ME11_TMB_2700
 #2600
-# ./NewTest11.sh csc_00000001_EmuRUI01_Test_11_000_221012_093019_UTC 10843 me11data_2600 100000
-# ./NewTest11.sh csc_00000001_EmuRUI01_Test_11_000_230405_094944_UTC 11505 me11data_2600 100000
-# ./NewTest11.sh csc_00000001_EmuRUI01_Test_11_000_230512_085929_UTC 11752 me11data_2600 100000
-# ./NewTest11.sh csc_00000001_EmuRUI01_Test_11_000_230809_134755_UTC 12091 me11data_2600 100000
-# ./NewTest11.sh csc_00000001_EmuRUI01_Test_11_000_230816_144715_UTC 12220 me11data_2600 100000
-# ./NewTest11.sh csc_00000001_EmuRUI01_Test_11_000_240221_135355_UTC 12871 me11data_2600 100000
-# ./NewTest11.sh csc_00000001_EmuRUI01_Test_11_000_240327_092853_UTC 13149 me11data_2600 100000
-# python TMBRatePlotter_new.py --tenpctzero --charges me11_txt/charges_me11_2pct_new.txt --Dat0V me11_txt/TMB_0V_me11_2pct_new.txt --DatHV0 me11_txt/TMB_2600V_me11_2pct.txt --DatT11 me11_txt/anode_me11_2pct_2600.txt --plotname ME11_TMB_2600
+./NewTest11.sh csc_00000001_EmuRUI01_Test_11_000_221012_093019_UTC 10843 me11data_2600 100000
+./NewTest11.sh csc_00000001_EmuRUI01_Test_11_000_230405_094944_UTC 11505 me11data_2600 100000
+./NewTest11.sh csc_00000001_EmuRUI01_Test_11_000_230512_085929_UTC 11752 me11data_2600 100000
+./NewTest11.sh csc_00000001_EmuRUI01_Test_11_000_230809_134755_UTC 12091 me11data_2600 100000
+./NewTest11.sh csc_00000001_EmuRUI01_Test_11_000_230816_144715_UTC 12220 me11data_2600 100000
+./NewTest11.sh csc_00000001_EmuRUI01_Test_11_000_240221_135355_UTC 12871 me11data_2600 100000
+./NewTest11.sh csc_00000001_EmuRUI01_Test_11_000_240327_092853_UTC 13149 me11data_2600 100000
+python TMBRatePlotter_new.py --tenpctzero --charges me11_txt/charges_me11_2pct_new.txt --Dat0V me11_txt/TMB_0V_me11_2pct_new.txt --DatHV0 me11_txt/TMB_2600V_me11_2pct.txt --DatT11 me11_txt/anode_me11_2pct_2600.txt --plotname ME11_TMB_2600
 
 
-python TMBRatePlotter_new.py --tenpctzero --charges me11_txt/charges_me11_2pct_new.txt --Dat0V me11_txt/TMB_0V_me11_2pct_new.txt --DatHV0 me11_txt/TMB_HV0_me11_2pct_new.txt --DatT11 me11_txt/anode_me11_2pct_hv0.txt --plotname ME11_TMB_HV0
+# python TMBRatePlotter_new.py --tenpctzero --charges me11_txt/charges_me11_2pct_new.txt --Dat0V me11_txt/TMB_0V_me11_2pct_new.txt --DatHV0 me11_txt/TMB_HV0_me11_2pct_new.txt --DatT11 me11_txt/anode_me11_2pct_hv0.txt --plotname ME11_TMB_HV0

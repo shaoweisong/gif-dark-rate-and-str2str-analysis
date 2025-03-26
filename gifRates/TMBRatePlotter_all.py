@@ -275,15 +275,19 @@ for i in xrange(len(tmbdump_hv0)):
         t11hist = t11file.Get("ALCT/hAhitL[4][1]")
         #The bad WG is 5, but histogram bins start counting from 1 (the first bin would be at zero) and in addition the WG start counting at 1 - with bin 1 left empty, so 2 is added to the desired wg to get the index.
         l5bad = t11hist.GetBinContent(7)/30
+        print("l5bad: ", l5bad)
         l5good = t11hist.GetBinContent(8)/30
+        print("l5good: ", l5good)
         corralct = alct - l5bad + l5good
-        print "corralct: ", corralct
+
         print "alct", alct
-        
+        print "corralct: ", corralct
         if args.plotcathodes:
             cfeb = tmbdump_hv0[i][4]/thv0 - tmbdump_0v[i][4]/t0v
             clct = tmbdump_hv0[i][5]/thv0 - tmbdump_0v[i][5]/t0v
     tmb = tmbdump_hv0[i][6]/thv0 - tmbdump_0v[i][6]/t0v
+    print "alct*clct", tmb
+
     dt = TDatime(pydt.year, pydt.month, pydt.day, pydt.hour, pydt.minute, pydt.second)
     t = dt.Convert()
     if args.tenpctzero:
@@ -392,7 +396,7 @@ else:
         if args.plotname == 'ME21_TMB':
             TMBRateLimits = Limits("TMBRatelimits","", "Accumulated Charge [mC/cm]", "Dark Rate [kHz]", 1000, qtot[0], qmax+280 , 100, 0, 6)
         elif args.plotname == 'ME11_TMB':
-            TMBRateLimits = Limits("TMBRatelimits","", "Accumulated Charge [mC/cm]", "Dark Rate [kHz]", 1000, qtot[0], qmax , 100, 0, 3)
+            TMBRateLimits = Limits("TMBRatelimits","", "Accumulated Charge [mC/cm]", "Dark Rate [kHz]", 1000, 0, 870 , 100, 0, 3)
         else:
             # TMBRateCanvas.SetLogy()
             TMBRateLimits = Limits("TMBRatelimits","", "Accumulated Charge [mC/cm]", "Dark Rate [kHz]", 1000, qtot[0], qmax , 100, 0, 4)

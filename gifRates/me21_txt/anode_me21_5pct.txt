@@ -46,21 +46,32 @@ me21data/A6598.root      343.28              09-AUG-2017
 me21data/A10089.root      343.34              23-FEB-2022 
 me21data/A10553.root      403.34              14-SEP-2022
 me21data/A10632.root      414.26              21-SEP-2022
-me21data/A10735.root      440.57              28-SEP-2022
-me21data/A10827.root      452.80              05-OCT-2022
-me21data/A10907.root      460.88              12-OCT-2022
-me21data/A10982.root      488.71              23-NOV-2022
-me21data/A11028.root      500.29              30-NOV-2022
-me21data/A11242.root      523.12              01-MAR-2023
-me21data/A11557.root      572.30              05-APR-2023
-me21data/A11639.root      577.23              12-APR-2023
-me21data/A12060.root      600.48              28-JUN-2023
-me21data/A12144.root      627.93              09-AUG-2023             dose 
-me21data/A12191.root      639.13              16-AUG-2023            289.781
-me21data/A12272.root      651.65              06-SEP-2023            306.180
-me21data/A12434.root      651.65              25-OCT-2023            314.255   
-me21data/A12842.root      756.54              21-Feb-2024            370.926
-me21data/A12960.root      776.48              06-MAR-2024            389.460
-me21data/A13204.root      815.39              08-MAY-2024            428.371
-me21data/A13317.root      815.40              29-MAY-2024            428.372 
-me21data/A13363.root      825.08              05-Jun-2024            438.058
+me21data/A10735.root      420.57              28-SEP-2022
+me21data/A10827.root      422.80              05-OCT-2022
+me21data/A10907.root      427.50              12-OCT-2022
+me21data/A10982.root      456.00              23-NOV-2022
+me21data/A11028.root      466.60              30-NOV-2022
+me21data/A11242.root      483.90              01-MAR-2023
+me21data/A11557.root      530.60              05-APR-2023
+me21data/A11639.root      535.30              12-APR-2023
+me21data/A12060.root      581.10              28-JUN-2023
+me21data/A12144.root      606.00              09-AUG-2023              
+me21data/A12191.root      617.00              16-AUG-2023         
+me21data/A12272.root      628.37              06-SEP-2023           
+me21data/A12434.root      641.71              25-OCT-2023              
+me21data/A12842.root      699.10              21-Feb-2024           
+me21data/A12960.root      717.70              06-MAR-2024           
+me21data/A13204.root      756.90              08-MAY-2024           
+me21data/A13317.root      756.91              29-MAY-2024           
+me21data/A13363.root      766.60              05-Jun-2024 
+me21data/A13462.root      772.60              12-Jul-2024         
+me21data/A13573.root      772.70              17-Jul-2024
+me21data/A13632.root      775.00              24-Jul-2024
+me21data/A13897.root      802.90              28-AUG-2024
+me21data/A14003.root      805.10              04-SEP-2024
+me21data/A14073.root      825.80              16-OCT-2024
+me21data/A14119.root      831.80              23-OCT-2024
+me21data/A14231.root      842.80              06-NOV-2024
+me21data/A14277.root      848.0               13-NOV-2024
+me21data/A14415.root      861.2               28-NOV-2024
+me21data/A14505.root      861.3               19-FEB-2025
