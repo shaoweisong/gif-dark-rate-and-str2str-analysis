@@ -8,7 +8,7 @@ gStyle.SetOptStat(0)
 parser = argparse.ArgumentParser(description='For plotting strip to strip resistances')
 parser.add_argument('--tenpct', action='store_true', default=False, help="Are you treating 10 percent or 2 percent CF4 as the charge zero point?")
 parser.add_argument('--plotname', action='store', default="RStr2Str", type=str, help="name of pdf plot generated")
-parser.add_argument('--data', action='store', default="datame11/2pct_stripdatecharges.txt", type=str, help="charge and date data")
+parser.add_argument('--data', action='store', default="datame11/10pct2pct5pct_stripdatecharges.txt", type=str, help="charge and date data")
 args = parser.parse_args()
 
 gROOT.Macro(os.path.expanduser('rootlogon.C'))

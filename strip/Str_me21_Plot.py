@@ -8,7 +8,7 @@ gStyle.SetOptStat(0)
 parser = argparse.ArgumentParser(description='For plotting strip to strip resistances')
 parser.add_argument('--tenpct', action='store_true', default=False, help="Are you treating 10 percent or 2 percent CF4 as the charge zero point?")
 parser.add_argument('--plotname', action='store', default="RStr2StrME21", type=str, help="name of pdf plot generated")
-parser.add_argument('--data', action='store', default="datame21/10pct_stripdatecharges.txt", type=str, help="charge and date data")
+parser.add_argument('--data', action='store', default="datame21/10pct5pct_stripdatecharges.txt", type=str, help="charge and date data")
 args = parser.parse_args()
 
 gROOT.Macro(os.path.expanduser('rootlogon.C'))
@@ -48,7 +48,6 @@ def readCurrentFile(ifile, LayerStrips, charge, measnum):
     with open(ifile, "r") as f:
         for linenum, line in enumerate(f):
             if linenum < 3: continue
-            print("Line is "+line)
             lsplit = line.split()
             match = re.match('layer(\d)_strips(\d\d)_300V',lsplit[0])
             lstitle = match.group(1,2)
@@ -73,7 +72,7 @@ def doplot(lslist):
     if args.tenpct:
         Limits12 = TH2F("limits12", "Strips 1 and 2;Accumulated Charge (mC/cm);Strip 1 to Strip 2 Resistance (T#Omega)", 1000, 330, 750, 100, 10**(-3), 10**(4))
     else:
-        Limits12 = TH2F("limits12", "Strips 1 and 2;Accumulated Charge (mC/cm);Strip 1 to Strip 2 Resistance (T#Omega)", 1000, 0, 400, 100, 10**(-3), 10**(4))
+        Limits12 = TH2F("limits12", "Strips 1 and 2;Accumulated Charge (mC/cm);Strip 1 to Strip 2 Resistance (T#Omega)", 1000, 0, 900, 100, 10**(-3), 10**(4))
     #Limits12.GetXaxis().SetLabelSize(0.03)
     #Limits12.GetYaxis().SetLabelSize(0.03)
     #Limits12.GetYaxis().SetTitleSize(0.03)
@@ -102,7 +101,7 @@ def doplot(lslist):
     if args.tenpct:
         Limits23 = TH2F("limits23", "Strips 2 and 3;Accumulated Charge (mC/cm);Strip 2 to Strip 3 Resistance (T#Omega)", 1000, 330, 750, 100, 10**(-3), 10**(4))
     else:
-        Limits23 = TH2F("limits23", "Strips 2 and 3;Accumulated Charge (mC/cm);Strip 2 to Strip 3 Resistance (T#Omega)", 1000, 0, 400, 100, 10**(-3), 10**(4))
+        Limits23 = TH2F("limits23", "Strips 2 and 3;Accumulated Charge (mC/cm);Strip 2 to Strip 3 Resistance (T#Omega)", 1000, 0, 900, 100, 10**(-3), 10**(4))
     #Limits23.GetXaxis().SetLabelSize(0.03)
     #Limits23.GetYaxis().SetLabelSize(0.03)
     #Limits23.GetYaxis().SetTitleSize(0.03)
@@ -133,6 +132,7 @@ qtot = []
 t_q = []
 with open(args.data, "r") as f1:
     for line in f1:
+        print("Line is "+line)
         t_q += ["datame21/"+line.split()[0]+".txt"]
         if args.tenpct:
             qtot += [float(line.split()[1]) + 330]

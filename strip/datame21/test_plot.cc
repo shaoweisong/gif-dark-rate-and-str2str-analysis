@@ -65,16 +65,17 @@ TF1 * fit(TGraphErrors * graph, double mean, int& status){
     f1->SetParameter(2,-0.01);                        
     f1->SetParLimits(2, -100, 0);
     f1->SetParameter(3,10);
-    f1->SetParLimits(3, 0, 100000);
+    f1->SetParLimits(3, 0, 1000);
     f1->SetParameter(4,-0.001);
     f1->SetParLimits(4, -100, 0);
     //f1->SetParameter(5,0.1);
     //f1->SetParLimits(3, 0, 100)
     //f1->SetParameter(6,-0.1);
     //f1->SetParLimits(4, -10, 0)
-    f1->SetLineColor(4);
+    f1->SetLineColor(2);
     // S- return result as TFitResultPtr, R - Use the range specified in the function range, E - Perform better error estimation using minos technique, Q - Quiet Mode (minimum printing)
-    status = graph->Fit(f1,"SREQ");
+    status = graph->Fit(f1,"Q");    
+    // status = graph->Fit(f1,"SREQ");
     return f1;
 };
 
@@ -87,16 +88,18 @@ TF1 * nfit(TGraphErrors * graph, double mean, int& status){
     TF1 * f2 = new TF1("f2","[0]+[1]*exp(x*[2])+[3]*exp(x*[4])", minX, maxX);
     f2->SetParameter(0,mean);
     f2->SetParLimits(0, 0.01*mean, 10*mean);
-    f2->SetParameter(1,-100);
-    f2->SetParLimits(1, -100000, 0);
+    f2->SetParameter(1,-500);
+    f2->SetParLimits(1, -2000, 0);
     f2->SetParameter(2,-0.01);
     f2->SetParLimits(2, -100, 0);
-    f2->SetParameter(3,-10);
-    f2->SetParLimits(3, -100000, 0);
+    f2->SetParameter(3,-1000);
+    f2->SetParLimits(3, -3000, 0);
     f2->SetParameter(4,-0.001);
     f2->SetParLimits(4, -100, 0);
-    f2->SetLineColor(4);
-    status = graph->Fit(f2,"SREQ");
+    f2->SetLineColor(2);
+    // status = graph->Fit(f2,"SREQ");
+    status = graph->Fit(f2,"qw");
+
     return f2;
 };
 
@@ -293,7 +296,7 @@ void test_plot(const char * dirnameChar, const char * fnameTChar="ClosedCircuit_
             int status=-1;
             //exponential decay fit on 0v
             TF1 *nf = nfit(dataGr[j][0],mean[0],status);
-            nf->Draw("sames");
+            // nf->Draw("sames");
             double I0;
             if ( status == 0 ) {
                 I0 = nf->GetParameter(0);
@@ -313,7 +316,7 @@ void test_plot(const char * dirnameChar, const char * fnameTChar="ClosedCircuit_
                 I300 = ff->GetParameter(0);
                 }
             else {I300 = mean[1];}
-            ff->Draw("sames");
+            // ff->Draw("sames");
             
             std::cout << "name, mean, and normalized RMS: " << dataGr[j][1]->GetTitle() << "\t"<< xmax << "\t\t" << mean[1] << " " << rms[1]/TMath::Sqrt(n4mean) << "\t"<<std::endl;
             std::cout << "Fit status, final measured current, and error: " << status << "\t" << I300 - I0<< " " << ff->GetParError(0) << std::endl;

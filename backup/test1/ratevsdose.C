@@ -16,7 +16,7 @@ void ratevsdose() {
 
    double N_tot[n1]={0}, N_bad[n1]={0};
    for(int i=0;i<44;i++){
-     TFile *f_temp = new TFile(("../gifRates/me11data/10pct/"+dataname_10p[i]).c_str(),"read");
+     TFile *f_temp = new TFile(("../../gifRates/me11data/10pct/"+dataname_10p[i]).c_str(),"read");
      for(short unsigned int l=0; l<6; l++){
        TH1F *h_temp = (TH1F*)f_temp->Get(histo[l].c_str());
        N_tot[i+2] += h_temp->GetEntries();
@@ -26,10 +26,14 @@ void ratevsdose() {
      }
      delete f_temp;
    }
-
+  //print N_tot
+    std::cout<<"N_tot"<<n1<<std::endl;
+    for(int i=0; i<n1; i++){
+      std::cout<<N_tot[i]<<std::endl;
+    }
    double N_tot_2p[n2] = {0}, N_bad_2p[n2] = {0};
    for(int i=0;i<n2;i++){
-     TFile *f_temp = new TFile(("../gifRates/me11data/"+dataname_2p[i]).c_str(),"read");
+     TFile *f_temp = new TFile(("../../gifRates/me11data/2pct/"+dataname_2p[i]).c_str(),"read");
      for(short unsigned int l=0; l<6; l++){
        TH1F *h_temp = (TH1F*)f_temp->Get(histo[l].c_str());
        N_tot_2p[i] += h_temp->GetEntries();
@@ -75,7 +79,17 @@ void ratevsdose() {
    //TGraph *gr12_2p = new TGraph(n2, charge2, clct2);
    TGraph *gr13_2p = new TGraph(n2, charge2, cna2);
    TGraph *gr10_2p = new TGraph(n2, charge2, alct_correction_2p);
-
+   //print alct1 length
+    std::cout<<"alct1"<<n1<<std::endl;
+   //print charge1
+    std::cout<<"charge1"<<n1<<std::endl;
+    for(int i=0; i<n1; i++){
+      std::cout<<charge1[i]<<std::endl;
+    }
+    // std::cout<<"charge2"<<n2<<std::endl;
+    // for(int i=0; i<n2; i++){
+    //   std::cout<<charge2[i]<<std::endl;
+    // }
    c1->cd();
    gr11_10p->SetTitle("; Accumulated charge [mC/cm]; Dark rate [kHz]");
    //TGaxis *a = (TGaxis*)gr11_10p->GetYaxis();

@@ -89,22 +89,16 @@ TF1 * nfit(TGraphErrors * graph, double mean, int& status){
     TF1 * f2 = new TF1("f2","[0]+[1]*exp(x*[2])+[3]*exp(x*[4])");
     f2->SetParameter(0,mean);
     f2->SetParLimits(0, 0.01*mean, 10*mean);
-    //f2->SetParameter(1,-100);
-    //f2->SetParameter(1,-10);
     f2->SetParLimits(1, -100000, 0);
-    //f2->SetParLimits(1, -200, 0);
-    //f2->SetParameter(2,-0.01);
     f2->SetParameter(2,-0.01);
     f2->SetParLimits(2, -100, 0);
     f2->SetParameter(3,-10);
-    //f2->SetParLimits(3, -100000, 0);
     f2->SetParLimits(3, -50, 0);
     f2->SetParameter(4,-0.001);
     f2->SetParLimits(4, -100, 0);
-    //f2->SetParLimits(4, -1, 0);
     f2->SetLineColor(2);
-    //status = graph->Fit(f2,"SREQ");
-    status = graph->Fit(f2,"qw");
+    status = graph->Fit(f2,"SREQ");
+    // status = graph->Fit(f2,"qw");
     return f2;
 };
 
