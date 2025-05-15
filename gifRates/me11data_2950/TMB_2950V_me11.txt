@@ -1,0 +1,26 @@
+connecting...
+ok
+ select MEASUR_NUM, TIME_SAVE, TEST_START, ME11_state, HV_ME11, HV_SETTING1, RUN_COMMENT, SOURCE_STATE,  ATTENUAT_UP, TMB_DUMP_TIME from gif_ageing_tab  where  MEASUR_TYPE='Dark rate' and RUN_TYPE='TMB dump (test 27s)' and ME11_state='on'  and HV_ME11=0 order by MEASUR_NUM 
+
+
+   A#                start time                        HV SRCdwn t[sec]       0ALCT:      13CLCT:      14CLCT:      15CLCT:      16CLCT:      17CLCT:      18CLCT:      19CLCT:      20CLCT:         TMB:         L1A:    comment
+10857    12-OCT-2022 , 13:25:24                      2950    off    10        62222        44260         1781         1876         1938          337          595        38521          655        43829            0     5% CF4 closed loop Dark rates test 11: 30s Dark rates test 27s: 50k Events
+11522    05-APR-2023 , 12:37:34                      2950    off    10        18755        14605         1772         1803         1845          339          549         9131          564        14218        14218     
+11769    12-MAY-2023 , 12:36:45                      2950    off    10        46369        36147         1879         2009         1920          362          584        30377          601        35236            0     loop close
+12108    09-AUG-2023 , 16:40:21                      2950    off    10       123356        93371         1881         1907         1786          322          605        87734          572        91670            0     after LV recycling
+12237    16-AUG-2023 , 17:25:39                      2950    off    10       122933        92772         1811         1881         1924          344          579        87069          612        90809            0     after LV recycling
+13166    27-MAR-2024 , 11:03:59                      2950    off    10       128389       109761         1798         1849         1891          389          587       104126          578       108665        16569     
+12885    21-FEB-2024 , 15:23:30                      2950    off    10        32421        26272         1616         1803         1842          320          559        20904          599        25652        13281     5% open loop low rate on CFEB3 also with extension cables
+13249    08-MAY-2024 , 14:54:46                      2950    off    10        33800        26750         1714         1811         1899          371          602        21171          584        26061         7787     running in the open loop
+13405    05-JUN-2024 , 12:00:32                      2900    off    10        31690        24679         1680         1774         1764          342          572        19320          570         24082       24082     
+13507    12-JUL-2024 , 17:41:19                      2950    off    10        19283      2713503      2699384         1573         1525          250          445        11024          417        15588        15586     
+13541    17-JUL-2024 , 11:54:26                      2950    off    10      1259931      3627644      2683711         1399         1389          270          474       947563          454       978218            0     
+13720    31-JUL-2024 , 11:01:00                      2950    off    10        11305      4266512      4262642        19541         1591          316          492          527          507         5533         5562     Masked configuration for HV
+13803    07-AUG-2024 , 11:46:37                      2950    off    10        13812      4410481      4405273        22494         2529          488          648          657          658         7541         8877     Masked Configuration
+13934    28-AUG-2024 , 15:28:15                      2950    off    10         7223      4494075      4490591        22700         1502          280          477          469          451         4706         4704     Masked Configuration
+13968    04-SEP-2024 , 12:28:08                      2950    off    10        12614      4730105      4726088        28808         1582          277          457          464          434         5659         5657     Masked Configuration
+14038    16-OCT-2024 , 14:09:35                      2950    off    10         7059      3652403      3648488        16585         1671          316          649          468          449         5017         5009     Normal Configuration
+14164    30-OCT-2024 , 14:02:15                      2950    off    10         6502      3928488      3924854        17362         1582          270          496          451          438         4834         4832     Masked Configuration
+14559    05-MAR-2025 , 11:17:31                      2950    off    10      2091078       417882       411819         1484         1644          291          498         2865          436       416106            0     
+14682    30-APR-2025 , 13:47:02                      2950    off    10         6211      5227192      5223842        19499         1361          188          471          470          423         4743            0     config VME_ME11_ME21_maskME11L5problem.xml
+14781    07-MAY-2025 , 11:46:02                      2950    off    10         7374       295113       290979         1655         1690          259          585          513          580         5405         5398     config VME_ME11_ME21_maskME11L5problem.xml

@@ -1,0 +1,26 @@
+connecting...
+ok
+ select MEASUR_NUM, TIME_SAVE, TEST_START, ME11_state, HV_ME11, HV_SETTING1, RUN_COMMENT, SOURCE_STATE,  ATTENUAT_UP, TMB_DUMP_TIME from gif_ageing_tab  where  MEASUR_TYPE='Dark rate' and RUN_TYPE='TMB dump (test 27s)' and ME11_state='on'  and HV_SETTING1 like '%HV0%' order by MEASUR_NUM 
+
+
+   A#                start time                        HV SRCdwn t[sec]       0ALCT:      13CLCT:      14CLCT:      15CLCT:      16CLCT:      17CLCT:      18CLCT:      19CLCT:      20CLCT:         TMB:         L1A:    comment
+10863    12-OCT-2022 , 13:42:25          ME11equalizedHV0    off    10        18695        10849         1628         1806         1781          297          579         5497          562        10654            0     5% CF4 closed loop Dark rates test 11: 30s Dark rates test 27s: 50k Events
+11516    05-APR-2023 , 12:21:17          ME11equalizedHV0    off    10         8432         6354         1588         1684         1684          250          582         1190          567         6187         6186     
+11763    12-MAY-2023 , 11:26:00          ME11equalizedHV0    off    10        11026         7682         1588         1749         1729          304          552         2510          503         7570         7568     loop close
+12102    09-AUG-2023 , 16:28:08          ME11equalizedHV0    off    10        23414        11174         1638         1726         1759          309          535         5918          512        10813            0     after LV recycling
+12231    16-AUG-2023 , 17:10:29          ME11equalizedHV0    off    10        26577        13209         1580         1773         1846          323          555         7822          590        12559        12559     after LV recycling
+12864    21-FEB-2024 , 14:35:12          ME11equalizedHV0    off    10         7780         5879         1498         1717         1769          254          556          722          560         5770         5769     5% open loop low rate on CFEB3 also with extension cables
+13160    27-MAR-2024 , 10:52:13          ME11equalizedHV0    off    10        10190         6985         1611         1689         1741          312          613         1776          576         6791         6791     
+13243    08-MAY-2024 , 14:42:26          ME11equalizedHV0    off    10        11445         7865         1509         1644         1724          278          564         2740          558         7667         7666     running in the open loop
+13402    05-JUN-2024 , 11:53:16          ME11equalizedHV0    off    10        10800         7407         1665         1758         1801          321          619         1996          581         7232         7232     
+13501    12-JUL-2024 , 17:27:56          ME11equalizedHV0    off    10        19669      2651797      2641293         4058         4306          862         1048         3011         1007        14413        14413     
+13535    17-JUL-2024 , 10:40:32          ME11equalizedHV0    off    10        27800      2715740      2699807         1484         1371          225          464        13028          450        17818            0     
+13714    31-JUL-2024 , 10:46:17          ME11equalizedHV0    off    10         6340      4317424      4313997        20057         1430          218          456          437          449         4911         4936     Masked configuration for HV
+13791    07-AUG-2024 , 11:00:39          ME11equalizedHV0    off    10        37265      4905806      4884889        37883         4749          921         1142        12863         1018        26221        23328     Normal Configuration
+13925    28-AUG-2024 , 15:05:53          ME11equalizedHV0    off    10         6547      4434692      4431144        21475         1448          247          469          466          468         4890         4890     Masked Configuration
+13962    04-SEP-2024 , 12:12:07          ME11equalizedHV0    off    10         6052      4511383      4507989        22145         1449          224          416          469          432         4581         4580     Masked Configuration
+14032    16-OCT-2024 , 13:08:58          ME11equalizedHV0    off    10         5965      3448137      3444724        14390         1380          242          502          431          444         4736         4733     Normal Configuration
+14158    30-OCT-2024 , 13:47:05          ME11equalizedHV0    off    10         6137      3895176      3891643        19402         1458          230          525          485          476         4866            0     Masked Configuration
+14553    05-MAR-2025 , 11:02:40          ME11equalizedHV0    off    10         7400         5227         1394         1434         1480          252          506          715          468         5054         5052     
+14679    30-APR-2025 , 12:08:37          ME11equalizedHV0    off    10         5909      5037217      5033962        20581         1268          177          484          431          454         4627         4626     config VME_ME11_ME21_maskME11L5problem.xml
+14775    07-MAY-2025 , 11:23:19          ME11equalizedHV0    off    10         6093         6919         3359         1505         1379          170          470          471          481         4732            0     config VME_ME11_ME21_maskME11L5problem.xml

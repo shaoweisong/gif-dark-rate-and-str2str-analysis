@@ -1,0 +1,21 @@
+Processed root file        charge                Date      
+me11data_2900/A10852.root      749.69       12-OCT-2022
+me11data_2900/A11517.root      788.89       05-APR-2023
+me11data_2900/A11764.root      793.65       12-May-2023
+me11data_2900/A12103.root      807.65       09-AUG-2023
+me11data_2900/A12232.root      810.91       16-AUG-2023
+me11data_2900/A12880.root      836.69       21-Feb-2024
+me11data_2900/A13161.root      850.34       27-Mar-2024
+me11data_2900/A13244.root      850.35       08-MAY-2024
+me11data_2900/A13403.root      854.09       05-JUN-2024
+me11data_2900/A13502.root      856.52       12-JUL-2024
+me11data_2900/A13536.root      857.20       17-Jul-2024         
+me11data_2900/A13715.root      857.48       31-Jul-2024
+me11data_2900/A13798.root      860.68       07-AUG-2024
+me11data_2900/A13929.root      885.68       28-AUG-2024
+me11data_2900/A13963.root      888.08       04-SEP-2024
+me11data_2900/A14033.root      910.38       16-OCT-2024
+me11data_2900/A14159.root      923.78       30-OCT-2024
+me11data_2900/A14554.root      951.70       05-MAR-2025
+me11data_2900/A14674.root      974.90       30-APR-2025
+me11data_2900/A14776.root      975          07-MAY-2025

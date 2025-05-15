@@ -129,7 +129,6 @@ class oneHVrecord:
         else:
             cmd += " and " + self.HV_ME + """=""" + str(HV)
         cmd += """ order by MEASUR_NUM"""
-        print(cmd)
         self.cursor.execute(cmd)
         rows  = self.cursor.fetchall()
         if(len(rows)>0):
@@ -296,13 +295,13 @@ if __name__ == "__main__":
     value_list=[]
     for id in range (0,3):
         print ("\n\n", listofinterest[id])
-        print ("%15s %19s"%("date","<dose(2-5)> [mC/cm]"),)
-        for HV in Voltages:
-            print ("%9s"%(str(HV)),)
-        print ("")
+        # print ("%15s %19s"%("date","<dose(2-5)> [mC/cm]"),)
+        # for HV in Voltages:
+            # print ("%9s"%(str(HV)),)
+        # print ("")
                 
         for aDate in dateList:
-            print ("%15s %19.2f"%(aDate.strftime('%d %b %Y'), averageDoses[aDate]), )
+            # print ("%15s %19.2f"%(aDate.strftime(x'%d %b %Y'), averageDoses[aDate]), )
             dose_list.append(averageDoses[aDate])
             valuelist=[]
             for HV in Voltages:
@@ -326,9 +325,11 @@ if __name__ == "__main__":
                             value = -1
                 # print(formatstr%(value),)
                 valuelist.append(value)
-            print("")
-            print(Voltages)
-            print(valuelist)
+            if id == 0:
+                
+                print("date",aDate.strftime('%d %b %Y'))
+                print(Voltages)
+                print("valuelist",valuelist)
             if chamber==1:
                 root_filename="./me11root/"+aDate.strftime('%d %b %Y').replace(" ", "_")+".root"
                 # Voltages=[0, 2100, 2200, 2300, 2400, 2500, 2600, 2700, 2800, 'HV0', 2900, 'HV1_ageing', 2950, 3000]

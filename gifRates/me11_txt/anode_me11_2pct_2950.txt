@@ -1,8 +1,0 @@
-Processed root file        charge                Date      
-me11data_2950/A10855.root      399.69       12-OCT-2022
-me11data_2950/A11520.root      438.89       05-APR-2023
-me11data_2950/A11767.root      443.65       12-May-2023
-me11data_2950/A12106.root      457.65       09-AUG-2023
-me11data_2950/A12235.root      460.91       16-AUG-2023
-me11data_2950/A12883.root      486.69      21-Feb-2024
-me11data_2950/A13164.root      500.34      27-Mar-2024

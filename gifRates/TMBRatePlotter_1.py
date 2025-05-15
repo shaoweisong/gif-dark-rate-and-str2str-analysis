@@ -23,6 +23,7 @@ parser.add_argument('--charges', action ='store', default='charges_me11_all.txt'
 parser.add_argument('--DatHV0', action ='store', default='TMB_HV0_me11_all.txt', type=str, help="of HV0 TMB Dump measurements\n DEFAULT: TMB_HV0_me11_all.txt")
 parser.add_argument('--Dat0V', action ='store', default='TMB_0V_me11_all.txt', type=str, help="list of 0V TMB Dump measurements\n DEFAULT: TMB_0V_me11_all.txt")
 parser.add_argument('--DatT11', action ='store', default='anode_me11_all.txt', type=str, help="list of Test 11 measurements\n DEFAULT: anode_me11_all.txt")
+parser.add_argument('--LowHV', action='store_true', default=False, help="HV scan for low HV(2800)")
 args = parser.parse_args()
 class Legend:
     def __init__(self, xmin=0.2, ymin=0.7, xmax=0.4, ymax=0.85):
@@ -204,10 +205,12 @@ if len(qtot) != len(tmbdump_0v):
 if args.test11compare:
     t11fullCorralctrates = []
 rootfiles = []
+date = []
 with open(args.DatT11, "r") as f1:
     for lnum, line in enumerate(f1):
         if lnum == 0: continue
         rootfiles += [str(line.split()[0])]
+        date += [str(line.split()[2])]
         if args.test11compare:
             t11fullCorralctrates += [GetTotalCorrectedRate(rootfiles[-1])]
     f1.close()
@@ -287,8 +290,13 @@ for i in xrange(len(tmbdump_hv0)):
         corrtmb = corralct -50
     if corrtmb<0:
         corrtmb = corralct 
+    if args.LowHV:
+        corralct = alct
+        corrtmb = tmb
+    
     print("corralct: ", corralct)
     print("corrtmb: ", corrtmb)
+    print("date:" , pydt)
     dt = TDatime(pydt.year, pydt.month, pydt.day, pydt.hour, pydt.minute, pydt.second)
     t = dt.Convert()
     if args.tenpctzero:
@@ -391,17 +399,17 @@ else:
         #TMBRateLimits = Limits("TMBRatelimits", "TMB Dump Dark Rates", "Accumulated Charge [mC/cm]", "Dark Rate [kHz]", 1000, 0, 500, 100, 0, 5)
         TMBRateLimits = Limits("TMBRatelimits", "TMB Dump Dark Rates", "Accumulated Charge [mC/cm]", "Dark Rate [kHz]", 600, 0, 500, 100, 0, 5)
     else:
-        print(qmax)
         #TMBRateLimits = Limits("TMBRatelimits", "TMB Dump Dark Rates", "Accumulated Charge [mC/cm]", "Dark Rate [kHz]", 1000, qtot[0], qmax + 150, 100, 0, 8)
         #TMBRateLimits = Limits("TMBRatelimits", "TMB Dump Dark Rates", "Accumulated Charge [mC/cm]", "Dark Rate [kHz]", 1000, qtot[0], qmax + 150, 100, 0, 3)
         if args.plotname == 'ME21_TMB':
             TMBRateLimits = Limits("TMBRatelimits","", "Accumulated Charge [mC/cm]", "Dark Rate [kHz]", 1000, qtot[0], qmax+280 , 100, 0, 6)
         elif args.plotname == 'ME11':
-            print("ME11")
-            TMBRateLimits = Limits("TMBRatelimits","", "Accumulated Charge [mC/cm]", "Dark Rate [kHz]", 1000, 0, qmax+20 , 100, 0, 3)
+            TMBRateLimits = Limits("TMBRatelimits","", "Accumulated Charge [mC/cm]", "Dark Rate [kHz]", 1000, 0, qmax+20 , 100, 0, 13)
         else:
-            # TMBRateCanvas.SetLogy()
-            TMBRateLimits = Limits("TMBRatelimits","", "Accumulated Charge [mC/cm]", "Dark Rate [kHz]", 1000, qtot[0], qmax , 100, 0, 4)
+            # TMBRateLimits = Limits("TMBRatelimits","", "Accumulated Charge [mC/cm]", "Dark Rate [kHz]", 1000, qtot[0], qmax , 100, 0, 600)
+            TMBRateLimits = Limits("TMBRatelimits","", "Accumulated Charge [mC/cm]", "Dark Rate [kHz]", 1000, qtot[0], qmax , 100, 1e-1, 1000)
+            TMBRateCanvas.SetLogy()
+
     # plotALCTrates.draw()
     if args.plotname == 'ME11':
         accumulated_charge_value = 330
@@ -417,14 +425,14 @@ else:
         latex_2pct_CF4.SetTextSize(0.04)
         latex_2pct_CF4.SetTextAlign(12)
         latex_2pct_CF4.DrawLatex(480, 2, '#font[12]{2% CF_{4}}')
-        dashed_line2 = TLine(700, TMBRateLimits.lims.GetYaxis().GetXmin(), 700, TMBRateLimits.lims.GetYaxis().GetXmax())
+        dashed_line2 = TLine(710, TMBRateLimits.lims.GetYaxis().GetXmin(), 710, TMBRateLimits.lims.GetYaxis().GetXmax())
         dashed_line2.SetLineStyle(2)
         dashed_line2.SetLineColor(kBlack)
         dashed_line2.Draw()
         latex_5pct_CF4 = TLatex()
         latex_5pct_CF4.SetTextSize(0.04)
         latex_5pct_CF4.SetTextAlign(12)
-        latex_5pct_CF4.DrawLatex((TMBRateLimits.lims.GetXaxis().GetXmax()+700)/2-35, 2, '#font[12]{5% CF_{4}}')        
+        latex_5pct_CF4.DrawLatex((TMBRateLimits.lims.GetXaxis().GetXmax()+710)/2-35, 2, '#font[12]{5% CF_{4}}')        
         # plotALCTrates.draw()
         plotCorrALCTrates.draw()
         toplot = [plotCorrALCTrates, plotTMBrates]
@@ -446,7 +454,7 @@ else:
         # plotALCTrates.draw()
         toplot = [plotALCTrates, plotTMBrates]
     else:
-        accumulated_charge_value = 700
+        accumulated_charge_value = 710
         dashed_line = TLine(accumulated_charge_value, TMBRateLimits.lims.GetYaxis().GetXmin(), accumulated_charge_value, TMBRateLimits.lims.GetYaxis().GetXmax())
         dashed_line.SetLineStyle(2)
         dashed_line.SetLineColor(kBlack)

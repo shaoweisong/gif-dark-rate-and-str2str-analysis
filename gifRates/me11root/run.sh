@@ -6,6 +6,13 @@
 ./NewTest11.sh csc_00000001_EmuRUI01_Test_11_000_230816_152731_UTC 12238 me11data_3000 100000
 ./NewTest11.sh csc_00000001_EmuRUI01_Test_11_000_240221_142516_UTC 12886 me11data_3000 100000
 ./NewTest11.sh csc_00000001_EmuRUI01_Test_11_000_240327_100519_UTC 13167 me11data_3000 100000
+./NewTest11.sh csc_00000001_EmuRUI01_Test_11_000_240508_125620_UTC 13250 me11data_3000 100000
+./NewTest11.sh csc_00000001_EmuRUI01_Test_11_000_240605_100759_UTC 13409 me11data_3000 100000
+./NewTest11.sh csc_00000001_EmuRUI01_Test_11_000_240712_154250_UTC 13508 me11data_3000 100000
+./NewTest11.sh csc_00000001_EmuRUI01_Test_11_000_240828_133204_UTC 13935 me11data_3000 100000
+./NewTest11.sh csc_00000001_EmuRUI01_Test_11_000_241030_130343_UTC 14165 me11data_3000 100000
+No Nov 13 2024
+./NewTest11.sh csc_00000001_EmuRUI01_Test_11_000_250305_104217_UTC 14566 me11data_3000 100000
 python TMBRatePlotter_new.py --tenpctzero --charges me11_txt/charges_me11_2pct_new.txt --Dat0V me11_txt/TMB_0V_me11_2pct_new.txt --DatHV0 me11_txt/TMB_3000V_me11_2pct.txt --DatT11 me11_txt/anode_me11_2pct_3000.txt --plotname ME11_TMB_3000
 #2950
 ./NewTest11.sh csc_00000001_EmuRUI01_Test_11_000_221012_111954_UTC 10855 me11data_2950 100000
@@ -15,6 +22,13 @@ python TMBRatePlotter_new.py --tenpctzero --charges me11_txt/charges_me11_2pct_n
 ./NewTest11.sh csc_00000001_EmuRUI01_Test_11_000_230816_152107_UTC 12235 me11data_2950 100000
 ./NewTest11.sh csc_00000001_EmuRUI01_Test_11_000_240221_141901_UTC 12883 me11data_2950 100000
 ./NewTest11.sh csc_00000001_EmuRUI01_Test_11_000_240327_095936_UTC 13164 me11data_2950 100000
+./NewTest11.sh csc_00000001_EmuRUI01_Test_11_000_240508_125010_UTC 13247 me11data_2950 100000
+./NewTest11.sh csc_00000001_EmuRUI01_Test_11_000_240605_100222_UTC 13406 me11data_2950 100000
+./NewTest11.sh csc_00000001_EmuRUI01_Test_11_000_240712_153654_UTC 13505 me11data_2950 100000
+./NewTest11.sh csc_00000001_EmuRUI01_Test_11_000_240828_132334_UTC 13932 me11data_2950 100000
+./NewTest11.sh csc_00000001_EmuRUI01_Test_11_000_241030_125643_UTC 14162 me11data_2950 100000
+./NewTest11.sh csc_00000001_EmuRUI01_Test_11_000_241113_161352_UTC 14322 me11data_2950 100000
+./NewTest11.sh csc_00000001_EmuRUI01_Test_11_000_250305_101237_UTC 14557 me11data_2950 100000
 python TMBRatePlotter_new.py --tenpctzero --charges me11_txt/charges_me11_2pct_new.txt --Dat0V me11_txt/TMB_0V_me11_2pct_new.txt --DatHV0 me11_txt/TMB_2950V_me11_2pct.txt --DatT11 me11_txt/anode_me11_2pct_2950.txt --plotname ME11_TMB_2950
 #2900
 ./NewTest11.sh csc_00000001_EmuRUI01_Test_11_000_221012_110717_UTC 10852 me11data_2900 100000
@@ -24,6 +38,13 @@ python TMBRatePlotter_new.py --tenpctzero --charges me11_txt/charges_me11_2pct_n
 ./NewTest11.sh csc_00000001_EmuRUI01_Test_11_000_230816_151432_UTC 12232 me11data_2900 100000
 ./NewTest11.sh csc_00000001_EmuRUI01_Test_11_000_240221_141249_UTC 12880 me11data_2900 100000
 ./NewTest11.sh csc_00000001_EmuRUI01_Test_11_000_240327_095343_UTC 13161 me11data_2900 100000
+./NewTest11.sh csc_00000001_EmuRUI01_Test_11_000_240508_124405_UTC 13244 me11data_2900 100000
+./NewTest11.sh csc_00000001_EmuRUI01_Test_11_000_240605_095438_UTC 13403 me11data_2900 100000
+./NewTest11.sh csc_00000001_EmuRUI01_Test_11_000_240712_152938_UTC 13502 me11data_2900 100000
+./NewTest11.sh csc_00000001_EmuRUI01_Test_11_000_240828_131613_UTC 13929 me11data_2900 100000
+./NewTest11.sh csc_00000001_EmuRUI01_Test_11_000_241030_124841_UTC 14159 me11data_2900 100000
+./NewTest11.sh csc_00000001_EmuRUI01_Test_11_000_241113_160740_UTC 14319 me11data_2900 100000
+./NewTest11.sh csc_00000001_EmuRUI01_Test_11_000_250305_100447_UTC 14554 me11data_2900 100000
 python TMBRatePlotter_new.py --tenpctzero --charges me11_txt/charges_me11_2pct_new.txt --Dat0V me11_txt/TMB_0V_me11_2pct_new.txt --DatHV0 me11_txt/TMB_2900V_me11_2pct.txt --DatT11 me11_txt/anode_me11_2pct_2900.txt --plotname ME11_TMB_2900
 #2800
 ./NewTest11.sh csc_00000001_EmuRUI01_Test_11_000_221012_105838_UTC 10849 me11data_2800 100000
@@ -33,6 +54,13 @@ python TMBRatePlotter_new.py --tenpctzero --charges me11_txt/charges_me11_2pct_n
 ./NewTest11.sh csc_00000001_EmuRUI01_Test_11_000_230816_145933_UTC 12226 me11data_2800 100000
 ./NewTest11.sh csc_00000001_EmuRUI01_Test_11_000_240221_140616_UTC 12877 me11data_2800 100000
 ./NewTest11.sh csc_00000001_EmuRUI01_Test_11_000_240327_094135_UTC 13155 me11data_2800 100000
+./NewTest11.sh csc_00000001_EmuRUI01_Test_11_000_240508_123012_UTC 13238 me11data_2800 100000
+./NewTest11.sh csc_00000001_EmuRUI01_Test_11_000_240605_094229_UTC 13397 me11data_2800 100000
+./NewTest11.sh csc_00000001_EmuRUI01_Test_11_000_240712_151456_UTC 13496 me11data_2800 100000
+./NewTest11.sh csc_00000001_EmuRUI01_Test_11_000_240828_125354_UTC 13920 me11data_2800 100000
+./NewTest11.sh csc_00000001_EmuRUI01_Test_11_000_241030_121918_UTC 14153 me11data_2800 100000
+No 13 Nov 2024
+./NewTest11.sh csc_00000001_EmuRUI01_Test_11_000_250305_094940_UTC 14547 me11data_2800 100000
 python TMBRatePlotter_new.py --tenpctzero --charges me11_txt/charges_me11_2pct_new.txt --Dat0V me11_txt/TMB_0V_me11_2pct_new.txt --DatHV0 me11_txt/TMB_2800V_me11_2pct.txt --DatT11 me11_txt/anode_me11_2pct_2800.txt --plotname ME11_TMB_2800
 #2700
 ./NewTest11.sh csc_00000001_EmuRUI01_Test_11_000_221012_094318_UTC 10846 me11data_2700 100000
@@ -55,3 +83,5 @@ python TMBRatePlotter_new.py --tenpctzero --charges me11_txt/charges_me11_2pct_n
 
 
 # python TMBRatePlotter_new.py --tenpctzero --charges me11_txt/charges_me11_2pct_new.txt --Dat0V me11_txt/TMB_0V_me11_2pct_new.txt --DatHV0 me11_txt/TMB_HV0_me11_2pct_new.txt --DatT11 me11_txt/anode_me11_2pct_hv0.txt --plotname ME11_TMB_HV0
+
+#python create_multiHVroot.py

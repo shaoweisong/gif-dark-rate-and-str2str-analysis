@@ -97,7 +97,8 @@ TF1 * nfit(TGraphErrors * graph, double mean, int& status){
     f2->SetParameter(4,-0.001);
     f2->SetParLimits(4, -100, 0);
     f2->SetLineColor(2);
-    status = graph->Fit(f2,"SREQ");
+    // status = graph->Fit(f2,"SREQ");
+    status = graph->Fit(f2,"Q");
     // status = graph->Fit(f2,"qw");
     return f2;
 };

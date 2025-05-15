@@ -390,7 +390,7 @@ else:
             TMBRateLimits = Limits("TMBRatelimits","", "Accumulated Charge [mC/cm]", "Dark Rate [kHz]", 1000, qtot[0], qmax , 100, 0, 3)
     plotALCTrates.draw()
     if args.plotname == 'ME11_TMB':
-        accumulated_charge_value = 700
+        accumulated_charge_value = 710
         dashed_line = TLine(accumulated_charge_value, TMBRateLimits.lims.GetYaxis().GetXmin(), accumulated_charge_value, TMBRateLimits.lims.GetYaxis().GetXmax())
         dashed_line.SetLineStyle(2)
         dashed_line.SetLineColor(kBlack)

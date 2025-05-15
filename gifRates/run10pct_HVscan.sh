@@ -1,5 +1,1 @@
-./NewTest11.sh csc_00000001_EmuRUI01_Test_11_000_160218_151008_UTC 1085 me11data_2700 100000
-./NewTest11.sh csc_00000001_EmuRUI01_Test_11_000_160218_151529_UTC 1089 me11data_2800 100000
-./NewTest11.sh csc_00000001_EmuRUI01_Test_11_000_160218_153640_UTC 1093 me11data_2900 100000
-./NewTest11.sh csc_00000001_EmuRUI01_Test_11_000_160218_154226_UTC 1097 me11data_3000 100000
-./NewTest11.sh csc_00000001_EmuRUI01_Test_11_000_160218_155215_UTC 1101 me11data_2950 100000
+python HVscan.py --tenpctzero --charges me11data_HV0/charge_me11_HV0.txt --Dat0V me11data_HV0/TMB_0V_me11.txt --DatHV0 me11data_HV0/TMB_HV0_me11.txt --Dat3000 me11data_3000/TMB_3000V_me11.txt --Dat2950 me11data_2950/TMB_2950V_me11.txt --Dat2900 me11data_2900/TMB_2900V_me11.txt --Dat2800 me11data_2800/TMB_2800V_me11.txt --DatT11 me11data_HV0/anode_me11_HV0.txt --plotname ME11_TMB_HV0
